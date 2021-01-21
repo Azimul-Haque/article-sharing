@@ -144,31 +144,3 @@ Route::put('/dashboard/personal/profile/{id}/update', ['as'=>'dashboard.profile.
 // dashboard routes
 // dashboard routes
 
-// bcs charioteer
-// bcs charioteer
-Route::get('/onesignal', ['as'=>'dashboard.onesignal','uses'=>'OneSignalController@index']);
-Route::get('/onesignal/search', ['as'=>'dashboard.onesignal.search','uses'=>'OneSignalController@searchNow']);
-Route::post('/onesignal/store/qa', ['as'=>'dashboard.onesignal.storeqa','uses'=>'OneSignalController@storeQA']);
-Route::delete('/onesignal/qa/{id}/delete', ['as'=>'dashboard.onesignal.delqa','uses'=>'OneSignalController@delQA']);
-Route::put('/onesignal/qa/{id}/update', ['as'=>'dashboard.onesignal.updateqa','uses'=>'OneSignalController@updateQA']);
-Route::put('/onesignal/qa/{id}/approve', ['as'=>'dashboard.onesignal.approve','uses'=>'OneSignalController@approveQA']);
-Route::put('/onesignal/qa/{id}/unapprove', ['as'=>'dashboard.onesignal.unapprove','uses'=>'OneSignalController@unapproveQA']);
-
-Route::delete('/onesignal/report/{id}/delete', ['as'=>'dashboard.onesignal.delreport','uses'=>'OneSignalController@delReport']);
-Route::delete('/onesignal/message/{id}/delete', ['as'=>'dashboard.onesignal.delmessage','uses'=>'OneSignalController@delMessage']);
-
-Route::get('/onesignal/send/push', ['as'=>'dashboard.onesignal.sendpush','uses'=>'OneSignalController@sendPush']);
-Route::post('/onesignal/send/update', ['as'=>'dashboard.onesignal.sendupdate','uses'=>'OneSignalController@sendUpdate']);
-
-Route::get('/broadcast', ['as'=>'broadcast','uses'=>'OneSignalController@broadcast']);
-Route::post('/onesignal/post/question/api', ['as'=>'dashboard.onesignal.postqstnapi','uses'=>'OneSignalController@postQstnAPI']);
-Route::post('/onesignal/report/question/api', ['as'=>'dashboard.onesignal.reportqstnapi','uses'=>'OneSignalController@reportQstnAPI']);
-Route::post('/onesignal/contact/api', ['as'=>'dashboard.onesignal.contactapi','uses'=>'OneSignalController@contactAPI']);
-Route::get('/onesignal/test/json/array', ['as'=>'dashboard.onesignal.testjson','uses'=>'OneSignalController@testJson']);
-
-// iClock Attendance Test
-// iClock Attendance Test
-// Route::get('/iclock/cdata', ['as'=>'dashboard.attendance.test','uses'=>'AttendanceController@test']);
-// Route::post('/iclock/cdata', ['as'=>'dashboard.attendance.testpost','uses'=>'AttendanceController@testPost']);
-// Route::get('/iclock/getrequest', ['as'=>'dashboard.attendance.test2','uses'=>'AttendanceController@test2']);
-

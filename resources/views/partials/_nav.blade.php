@@ -3,16 +3,16 @@
     <div class="container">
         <div class="row">
             <!-- logo -->
-            <div class="col-md-4 pull-left">
+            <div class="col-md-2 pull-left">
                 <a class="logo-light" href="{{ route('index.index') }}">
                     <img alt="" src="{{ asset('images/logo.png') }}" class="logo" style="float: left;"/>
-                    <span style="float: left; font-size: 30px; font-weight: bold; margin-top: 20px; display: block;">TenX</span>
+                    <span style="float: left; font-size: 30px; font-weight: bold; margin-top: 20px; display: block;"></span>
                     {{-- <span style="float: left; font-size: 15px; font-weight: bold; margin-top: 7px; display: block;" class="hidden-xs">TenX</span> --}}
                     {{-- <span style="float: left; font-size: 12px; font-weight: bold; margin-top: 7px; display: block;" class="visible-xs">TenX</span> --}}
                 </a>
                 <a class="logo-dark" href="{{ route('index.index') }}">
                     <img alt="" src="{{ asset('images/logo.png') }}" class="logo" style="float: left;"/>
-                    <span style="float: left; font-size: 30px; font-weight: bold; margin-top: 20px; display: block;">TenX</span>
+                    <span style="float: left; font-size: 30px; font-weight: bold; margin-top: 20px; display: block;"></span>
                     {{-- <span style="float: left; font-size: 15px; font-weight: bold; margin-top: 7px; display: block;" class="hidden-xs">TenX</span> --}}
                     {{-- <span style="float: left; font-size: 12px; font-weight: bold; margin-top: 7px; display: block;" class="visible-xs">TenX</span> --}}
                 </a>
@@ -29,21 +29,16 @@
             </div>
             <!-- toggle navigation end -->
             <!-- main menu -->
-            <div class="col-md-8 no-padding-right accordion-menu text-right">
+            <div class="col-md-10 no-padding-right accordion-menu text-right">
                 <div class="navbar-collapse collapse">
                     <ul id="accordion" class="nav navbar-nav navbar-right panel-group">
-                        <li>
-                            <a href="{{ route('index.index') }}" class="inner-link">Home</a>
-                        </li>
-                        
-                        <li><a href="{{ route('index.about') }}" class="inner-link">About Us</a></li>
-                        {{-- <li><a href="{{ route('index.projects') }}" class="inner-link">Projects</a></li> --}}
+                        {{-- <li><a href="{{ route('index.index') }}" class="inner-link">Home</a></li> --}}
+                        <li><a href="{{ route('blogs.index') }}" class="inner-link">Education</a></li>
+                        <li><a href="{{ route('blogs.index') }}" class="inner-link">Business</a></li>
                         <li class="dropdown panel simple-dropdown">
                             <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
-                                Resourses ▽
+                                Historical Place ▽
                             </a>
-                            <!-- sub menu single -->
-                            <!-- sub menu item  -->
                             <ul id="nav_archive" class="dropdown-menu panel-collapse collapse" role="menu">
                                 <li>
                                     <a href="{{ route('index.publications') }}"><i class="icon-newspaper i-plain"></i> Publications</a>
@@ -53,9 +48,33 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="{{ route('blogs.index') }}">Blog</a>
+                        <li class="dropdown panel simple-dropdown">
+                            <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
+                                Travel ▽
+                            </a>
+                            <ul id="nav_archive" class="dropdown-menu panel-collapse collapse" role="menu">
+                                <li>
+                                    <a href="{{ route('index.publications') }}"><i class="icon-newspaper i-plain"></i> Publications</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.disasterdata') }}"><i class="icon-cloud i-plain"></i> Data</a>
+                                </li>
+                            </ul>
                         </li>
+                        <li class="dropdown panel simple-dropdown">
+                            <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
+                                Biography ▽
+                            </a>
+                            <ul id="nav_archive" class="dropdown-menu panel-collapse collapse" role="menu">
+                                <li>
+                                    <a href="{{ route('index.publications') }}"><i class="icon-newspaper i-plain"></i> Publications</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.disasterdata') }}"><i class="icon-cloud i-plain"></i> Data</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ route('index.about') }}" class="inner-link">About</a></li>
                         <li>
                             <a href="{{ route('index.contact') }}">Contact</a>
                         </li>

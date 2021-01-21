@@ -8,7 +8,7 @@ use App\Http\Requests;
 
 use App\User;
 use App\Blog;
-use App\Blogcategory;
+use App\Category;
 use App\Like;
 use Carbon\Carbon;
 use DB, Hash, Auth, Image, File, Session;
@@ -23,7 +23,7 @@ class BlogController extends Controller {
 
     public function index()
     {
-        $categories = Blogcategory::all();
+        $categories = Category::all();
         $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
                         ->select("created_at", DB::raw('count(*) as total'))
@@ -46,7 +46,7 @@ class BlogController extends Controller {
      */
     public function create()
     {
-        $categories = Blogcategory::all();
+        $categories = Category::all();
         return view('blogs.create')->withCategories($categories);
     }
 
