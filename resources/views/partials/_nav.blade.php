@@ -36,12 +36,8 @@
                             <a href="{{ route('index.index') }}" class="inner-link">Home</a>
                         </li>
                         
-                        <li>
-                            <a href="{{ route('index.about') }}" class="inner-link">About Us</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index.projects') }}" class="inner-link">Projects</a>
-                        </li>
+                        <li><a href="{{ route('index.about') }}" class="inner-link">About Us</a></li>
+                        {{-- <li><a href="{{ route('index.projects') }}" class="inner-link">Projects</a></li> --}}
                         <li class="dropdown panel simple-dropdown">
                             <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
                                 Resourses ▽
