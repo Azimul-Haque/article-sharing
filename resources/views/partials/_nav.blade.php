@@ -32,46 +32,45 @@
             <div class="col-md-10 no-padding-right accordion-menu text-right">
                 <div class="navbar-collapse collapse">
                     <ul id="accordion" class="nav navbar-nav navbar-right panel-group">
-                        {{-- <li><a href="{{ route('index.index') }}" class="inner-link">Home</a></li> --}}
-                        <li><a href="{{ route('blogs.index') }}" class="inner-link">Education</a></li>
-                        <li><a href="{{ route('blogs.index') }}" class="inner-link">Business</a></li>
+                        <li><a href="{{ route('index.index') }}" class="inner-link">Home</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'education') }}" class="inner-link">Education</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'business') }}" class="inner-link">Business</a></li>
                         <li class="dropdown panel simple-dropdown">
-                            <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
+                            <a href="#nav_hisorical" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
                                 Historical Place ▽
                             </a>
-                            <ul id="nav_archive" class="dropdown-menu panel-collapse collapse" role="menu">
-                                <li>
-                                    <a href="{{ route('index.publications') }}"><i class="icon-newspaper i-plain"></i> Publications</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('index.disasterdata') }}"><i class="icon-cloud i-plain"></i> Data</a>
-                                </li>
+                            <ul id="nav_hisorical" class="dropdown-menu panel-collapse collapse" role="menu">
+                                <li><a href="{{ route('blog.categorywise', 'dhaka') }}"><i class="icon-map-pin i-plain"></i> Dhaka</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'rajshahi') }}"><i class="icon-map-pin i-plain"></i> Rajshahi</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'sylhet') }}"><i class="icon-map-pin i-plain"></i> Sylhet</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'chittagong') }}"><i class="icon-map-pin i-plain"></i> Chittagong</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'barisal') }}"><i class="icon-map-pin i-plain"></i> Barisal</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'khulna') }}"><i class="icon-map-pin i-plain"></i> Khulna</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'rangpur') }}"><i class="icon-map-pin i-plain"></i> Rangpur</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'mymensingh') }}"><i class="icon-map-pin i-plain"></i> Mymensingh</a></li>
                             </ul>
                         </li>
                         <li class="dropdown panel simple-dropdown">
-                            <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
+                            <a href="#nav_travel" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
                                 Travel ▽
                             </a>
-                            <ul id="nav_archive" class="dropdown-menu panel-collapse collapse" role="menu">
-                                <li>
-                                    <a href="{{ route('index.publications') }}"><i class="icon-newspaper i-plain"></i> Publications</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('index.disasterdata') }}"><i class="icon-cloud i-plain"></i> Data</a>
-                                </li>
+                            <ul id="nav_travel" class="dropdown-menu panel-collapse collapse" role="menu">
+                                <li><a href="{{ route('blog.categorywise', 'dhaka') }}"><i class="icon-map-pin i-plain"></i> Dhaka</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'world-wide') }}"><i class="icon-map-pin i-plain"></i> World Wide</a></li>
                             </ul>
                         </li>
                         <li class="dropdown panel simple-dropdown">
-                            <a href="#nav_archive" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
+                            <a href="#nav_biography" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
                                 Biography ▽
                             </a>
-                            <ul id="nav_archive" class="dropdown-menu panel-collapse collapse" role="menu">
-                                <li>
-                                    <a href="{{ route('index.publications') }}"><i class="icon-newspaper i-plain"></i> Publications</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('index.disasterdata') }}"><i class="icon-cloud i-plain"></i> Data</a>
-                                </li>
+                            <ul id="nav_biography" class="dropdown-menu panel-collapse collapse" role="menu">
+                                <li><a href="{{ route('blog.categorywise', 'asia') }}"><i class="icon-map-pin i-plain"></i> Asia</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'africa') }}"><i class="icon-map-pin i-plain"></i> Africa</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'europe') }}"><i class="icon-map-pin i-plain"></i> Europe</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'north-america') }}"><i class="icon-map-pin i-plain"></i> North America</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'south-america') }}"><i class="icon-map-pin i-plain"></i> South America</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'australia') }}"><i class="icon-map-pin i-plain"></i> Australia</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'antarctica') }}"><i class="icon-map-pin i-plain"></i> Antarctica</a></li>
                             </ul>
                         </li>
                         <li><a href="{{ route('index.about') }}" class="inner-link">About</a></li>

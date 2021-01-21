@@ -203,7 +203,11 @@ class BlogController extends Controller {
         }
     }
 
-    public function getCategoryWise($name) {
+    public function getCategoryWise($name) 
+    {
+        // SEO factor
+        $name = ucwords(str_replace("-", " ", $name));
+        // SEO factor
         $categories = Category::all();
         $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
