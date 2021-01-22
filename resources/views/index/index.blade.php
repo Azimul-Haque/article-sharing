@@ -164,7 +164,7 @@
         </div>
     </section>
     <!-- counter section -->
-    <section id="counter" class="fix-background" style="background-image:url('images/slider/slider-img45.jpg');">
+    <section id="counter" class="fix-background" style="background-image:url('images/sliders/slider-img45.jpg');">
         <div class="opacity-full bg-dark-gray"></div>
         <div class="container position-relative">
             <div class="row">
@@ -237,7 +237,7 @@
                             @endif
                         </div>
                         <div class="separator-line bg-black no-margin-lr"></div>
-                        <div>
+                        {{-- <div>
                             <a href="#!" class="blog-like"><i class="fa fa-heart-o"></i>{{ $blog->likes }} Like(s)</a>
                             <a href="#" class="comment"><i class="fa fa-comment-o"></i>
                             <span id="comment_count{{ $blog->id }}"></span> comment(s)</a>
@@ -256,7 +256,7 @@
                                     }
                                 });
                             </script>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 @php

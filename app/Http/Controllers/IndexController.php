@@ -51,6 +51,7 @@ class IndexController extends Controller
                             ->withSliders($sliders)
                             ->withProjects($projects)
                             ->withPublications($publications)
+                            ->withBlogs($blogs)
                             ->withEmployeecount($employeecount)
                             ->withOngoingprojectcount($ongoingprojectcount)
                             ->withCompleteprojectcount($completeprojectcount)
