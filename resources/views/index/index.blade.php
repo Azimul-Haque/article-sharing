@@ -164,46 +164,6 @@
         </div>
     </section>
     <!-- counter section -->
-    <section id="counter" class="wow fadeIn border-bottom">
-        <div class="container">
-            <div class="row">
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten" data-wow-duration="300ms">
-                    <a href="{{ route('index.directors') }}">
-                        <span class="timer counter-number" data-to="{{ $employeecount }}" data-speed="7000"></span>
-                        <span class="counter-title">People</span>
-                    </a>
-                </div>
-                <!-- end counter -->
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten" data-wow-duration="600ms">
-                    <a href="{{ url('/projects#ongoing') }}">
-                        <span class="timer counter-number" data-to="{{ $ongoingprojectcount }}" data-speed="7000"></span>
-                        <span class="counter-title">Ongoing Project</span>
-                    </a>
-                </div>
-                <!-- end counter -->
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten" data-wow-duration="900ms">
-                    <a href="{{ url('/projects#completed') }}">
-                        <span class="timer counter-number" data-to="{{ $completeprojectcount }}" data-speed="7000"></span>
-                        <span class="counter-title">Projects Completed</span>
-                    </a>
-                </div>
-                <!-- end counter -->
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp" data-wow-duration="1200ms">
-                    <a href="{{ route('index.publications') }}">
-                        <span class="timer counter-number" data-to="{{ $publicationcount }}" data-speed="7000"></span>
-                        <span class="counter-title">Publications</span>
-                    </a>
-                </div>
-                <!-- end counter -->
-            </div>
-        </div>
-    </section>
-    <!-- end counter section -->
-    <!-- counter section -->
     <section id="counter" class="fix-background" style="background-image:url('images/slider/slider-img45.jpg');">
         <div class="opacity-full bg-dark-gray"></div>
         <div class="container position-relative">
@@ -211,29 +171,29 @@
                 <!-- counter item -->
                 <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten" data-wow-duration="300ms">
                     <i class="icon-heart medium-icon"></i>
-                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $alumnis }}" data-speed="7000"></span>
-                    <span class="counter-title light-gray-text">Alumnis</span>
+                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $employeecount }}" data-speed="7000"></span>
+                    <span class="counter-title light-gray-text">People</span>
                 </div>
                 <!-- end counter item -->
                 <!-- counter item -->
                 <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten" data-wow-duration="600ms">
                     <i class="icon-happy medium-icon"></i>
-                    <span class="timer counter-number white-text main-font font-weight-600" data-to="20" data-speed="7000"></span>
-                    <span class="counter-title light-gray-text">Batch</span>
+                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $ongoingprojectcount }}" data-speed="7000"></span>
+                    <span class="counter-title light-gray-text">Ongoing Project</span>
                 </div>
                 <!-- end counter item -->
                 <!-- counter item -->
                 <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten" data-wow-duration="900ms">
                     <i class="icon-anchor medium-icon"></i>
-                    <span class="timer counter-number white-text main-font font-weight-600" data-to="20" data-speed="7000"></span>
+                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $completeprojectcount }}" data-speed="7000"></span>
                     <span class="counter-title light-gray-text">Projects Completed</span>
                 </div>
                 <!-- end counter item -->
                 <!-- counter item -->
                 <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp" data-wow-duration="1200ms">
                     <i class="icon-chat medium-icon"></i>
-                    <span class="timer counter-number white-text main-font font-weight-600" data-to="5" data-speed="7000"></span>
-                    <span class="counter-title light-gray-text">Events</span>
+                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $publicationcount }}" data-speed="7000"></span>
+                    <span class="counter-title light-gray-text">Publications</span>
                 </div>
                 <!-- end counter item -->
             </div>
