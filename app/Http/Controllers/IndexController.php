@@ -38,7 +38,7 @@ class IndexController extends Controller
         //                ->where('role', 'alumni')->count();
 
         $sliders = Slider::orderBy('id', 'desc')->get();
-        $projects = Project::orderBy('id', 'desc')->get()->take(4);
+        $projects = Project::orderBy('id', 'desc')->get()->take(5);
         $publications = Publication::where('status', 1)->orderBy('id', 'desc')->get()->take(3);
 
         $employeecount = User::all()->count();

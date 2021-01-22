@@ -59,7 +59,7 @@
             <div class="row">
                 <!-- section title -->
                 <div class="col-md-6 col-sm-6">
-                    <span class="text-large letter-spacing-2 black-text font-weight-600 agency-title">Recent Projects</span>
+                    <span class="text-large letter-spacing-2 black-text font-weight-600 agency-title">TenX</span>
                 </div>
                 <!-- end section title -->
                 <!-- section highlight text -->
@@ -69,7 +69,7 @@
             </div>
         </div>
     </section>
-    <section class="work-4col gutter work-with-title wide wide-title padding-three">
+    <section class="work-5col gutter work-with-title wide wide-title padding-three bg-yellow">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 grid-gallery overflow-hidden no-padding" >
@@ -78,7 +78,7 @@
                         <ul class="grid masonry-items">
                             @foreach($projects as $project)
                                 <!-- project -->
-                                <li class="@if($project->status == 0) ongoing @else completed @endif" style="min-height: 450px;">
+                                <li class="@if($project->status == 0) ongoing @else completed @endif" style="min-height: 320px;">
                                     <figure>
                                         <div class="gallery-img">
                                             <a href="{{ route('index.project', $project->slug) }}">
@@ -90,7 +90,8 @@
                                             </a>
                                         </div>
                                         <figcaption>
-                                            <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p>
+                                            <h3><big>{{ substr(strip_tags($project->title), 0, 50) }}</big></h3>
+                                            {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
                                             <a class="btn inner-link btn-black btn-small" href="{{ route('index.project', $project->slug) }}">Explore Now</a>
                                         </figcaption>
                                     </figure>
@@ -104,7 +105,7 @@
             </div>
         </div>
     </section>
-    <section class="padding-three bg-gray">
+    {{-- <section class="padding-three bg-gray">
         <div class="container">
             <div class="row">
                 <!-- section title -->
@@ -118,8 +119,8 @@
                 <!-- end section highlight text -->
             </div>
         </div>
-    </section>
-    <section id="features" class="features wow fadeIn" style="margin-bottom: 40px; padding: 60px 0;">
+    </section> --}}
+{{--     <section id="features" class="features wow fadeIn" style="margin-bottom: 40px; padding: 60px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -146,13 +147,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="padding-three bg-gray">
         <div class="container">
             <div class="row">
                 <!-- section title -->
                 <div class="col-md-6 col-sm-6">
-                    <span class="text-large letter-spacing-2 black-text font-weight-600 agency-title">Killa at a Glance</span>
+                    <span class="text-large letter-spacing-2 black-text font-weight-600 agency-title">TenX at a Glance</span>
                 </div>
                 <!-- end section title -->
                 <!-- section highlight text -->
@@ -203,7 +204,7 @@
     </section>
     <!-- end counter section -->
     <!-- highlight section -->
-    <section class="bg-fast-killa no-padding wow fadeInUp">
+    <section class="bg-fast-yellow no-padding wow fadeInUp">
         <div class="container">
             <div class="row padding-five sm-text-center">
                 <div class="col-md-1">
