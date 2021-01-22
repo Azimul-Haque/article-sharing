@@ -76,7 +76,7 @@
 
     <!-- footer -->
     <footer>
-        <div class=" bg-white footer-top">
+        <div class="bg-white footer-top">
             <div class="container">
                 <div class="row margin-four">
                     <!-- phone -->
@@ -182,13 +182,13 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-killa-gray footer-bottom">
+        <div class="container-fluid bg-dark-gray footer-bottom">
             <div class="container">
                 <div class="row margin-three">
                     <!-- copyright -->
-                    <div class="col-md-6 col-sm-6 col-xs-12 dark-gray-text text-left letter-spacing-1 xs-text-center xs-margin-bottom-one">
-                        &copy; {{ date('Y') }} <a href="{{ url('/') }}" style="text-decoration: none;" class="dark-gray-text"><b>Knowledge, Information & Learning for Local Adaptation (KILLA)</b></a>.
-                        <br/>Developed by <a href="http://loencebd.com/" style="text-decoration: none;" class="dark-gray-text"><b>Loence Bangladesh</b></a>.
+                    <div class="col-md-6 col-sm-6 col-xs-12 light-gray-text text-left letter-spacing-1 xs-text-center xs-margin-bottom-one">
+                        &copy; {{ date('Y') }} All Rights Reserved.
+                        <br/>Developed by <a href="https://innovabd.tech" style="text-decoration: none;" class="light-gray-text"><b>Innova Tech Bangladesh</b></a>.
                     </div>
                     <!-- end copyright -->
                     <!-- logo -->
