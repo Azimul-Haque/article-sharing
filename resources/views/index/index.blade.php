@@ -201,7 +201,7 @@
     </section>
     <!-- end counter section -->
     <!-- blog content section -->
-    <section class="">
+    <section class="padding-five">
         <div class="container">
             <div class="row">
                 <!-- call to action -->
@@ -216,7 +216,7 @@
                     $eventwaitduration = 300;
                 @endphp
                 @foreach($blogs as $blog)
-                <div class="col-md-4 col-sm-4 blog-listing wow fadeInRight" data-wow-duration="{{ $eventwaitduration }}ms">
+                <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-duration="{{ $eventwaitduration }}ms">
                     <div class="blog-image">
                         <a href="{{ route('blog.single', $blog->slug) }}">
                             @if($blog->featured_image != null)
@@ -228,8 +228,8 @@
                     </div>
                     <div class="blog-details">
                         <div class="blog-date"><a href="{{ route('blog.single', $blog->slug) }}">{{ $blog->user->name }}</a> | {{ date('F d, Y', strtotime($blog->created_at)) }}</div>
-                        <div class="blog-title"><a href="{{ route('blog.single', $blog->slug) }}">{{ $blog->title }}</a></div>
-                        <div class="blog-short-description" style="text-align: justify; text-justify: inter-word; width: 100%; min-height: 160px;">
+                        <div class="blog-title" style="min-height: 65px;"><a href="{{ route('blog.single', $blog->slug) }}">{{ $blog->title }}</a></div>
+                        <div class="blog-short-description" style="text-align: justify; text-justify: inter-word; width: 100%; min-height: 120px;">
                             @if(strlen(strip_tags($blog->body))>300)
                             {{ mb_substr(strip_tags($blog->body), 0, stripos($blog->body, " ", stripos(strip_tags($blog->body), " ")+200))." [...] " }}
                             @else
