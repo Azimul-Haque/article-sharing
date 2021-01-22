@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('title')
-    {{ $user->name }}
+    {{ $user->name }} 
 @endsection
 
 @section('css')
