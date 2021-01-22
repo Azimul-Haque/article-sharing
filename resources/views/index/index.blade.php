@@ -59,7 +59,7 @@
             <div class="row">
                 <!-- section title -->
                 <div class="col-md-6 col-sm-6">
-                    <span class="text-large letter-spacing-2 black-text font-weight-600 agency-title">TenX</span>
+                    <span class="text-large letter-spacing-2 black-text font-weight-600 agency-title">TenX Genres</span>
                 </div>
                 <!-- end section title -->
                 <!-- section highlight text -->
