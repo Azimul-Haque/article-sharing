@@ -77,8 +77,7 @@
                         <!-- tour grid -->
                         <ul class="grid masonry-items">
                             @foreach($projects as $project)
-                                <!-- project -->
-                                <li class="@if($project->status == 0) ongoing @else completed @endif">
+                                <li class="@if($project->status == 0) ongoing @else completed @endif wow fadeInLeft" data-wow-duration="900ms">
                                     <figure>
                                         <div class="gallery-img">
                                             <a href="{{ route('index.project', $project->slug) }}">
@@ -96,7 +95,6 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <!-- end project -->
                             @endforeach
                         </ul>
                         <!-- end tour grid -->
