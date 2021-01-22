@@ -69,7 +69,7 @@
             </div>
         </div>
     </section>
-    <section class="work-5col gutter work-with-title wide wide-title padding-three bg-yellow">
+    <section class="work-5col gutter work-with-title wide wide-title padding-five bg-yellow">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 grid-gallery overflow-hidden no-padding" >
@@ -78,7 +78,7 @@
                         <ul class="grid masonry-items">
                             @foreach($projects as $project)
                                 <!-- project -->
-                                <li class="@if($project->status == 0) ongoing @else completed @endif" style="min-height: 320px;">
+                                <li class="@if($project->status == 0) ongoing @else completed @endif">
                                     <figure>
                                         <div class="gallery-img">
                                             <a href="{{ route('index.project', $project->slug) }}">
