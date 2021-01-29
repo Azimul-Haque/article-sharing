@@ -46,9 +46,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-10 text-center center-col">
-                    <span class="margin-five no-margin-top display-block letter-spacing-2">Established-2017</span>
-                    <span style="font-size: 20px; font-weight: bold;">Knowledge, Information & Learning for Local Adaptation (KILLA)</span>
-                    <p class="text-med width-90 center-col margin-seven no-margin-bottom">Knowledge, Information & Learning for Local Adaptation (KILLA) a globally leading organization providing productive and technologically sustainable solutions for reshaping today and constructing a resilient tomorrow. </p>
+                    <span class="margin-five no-margin-top display-block letter-spacing-2">Established-2021</span>
+                    <span style="font-size: 20px; font-weight: bold;">TenX</span>
+                    <p class="text-med width-90 center-col margin-seven no-margin-bottom">Tenx is a name of such Organization that runs or leads something 10x speed. This is mainly an information based website of our organization. We collect information and spread it out for the people or the clients worldwide. We serve people into various categories like Education, Business, Travel etc. This is eventually you called a store house of information. Finally, we arrange internship opportunity for the students of different universities who want to join with us eagerly.</p>
                 </div>
             </div>
         </div>
@@ -76,26 +76,20 @@
                     <div class="tab-content">
                         <!-- tour grid -->
                         <ul class="grid masonry-items">
-                            @foreach($projects as $project)
-                                <li class="@if($project->status == 0) ongoing @else completed @endif wow fadeInLeft" data-wow-duration="900ms">
-                                    <figure>
-                                        <div class="gallery-img">
-                                            <a href="{{ route('index.project', $project->slug) }}">
-                                                @if($project->image != null)
-                                                  <img src="{{ asset('images/projects/'.$project->image)}}" />
-                                                @else
-                                                  <img src="{{ asset('images/abc.png')}}"  class="img-responsive" />
-                                                @endif
-                                            </a>
-                                        </div>
-                                        <figcaption>
-                                            <h3><big>{{ substr(strip_tags($project->title), 0, 50) }}</big></h3>
-                                            {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
-                                            <a class="btn inner-link btn-black btn-small" href="{{ route('index.project', $project->slug) }}">Explore Now</a>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            @endforeach
+                            <li class="completed wow fadeInLeft" data-wow-duration="900ms">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="{{ route('blog.categorywise', 'education') }}">
+                                            <img src="{{ asset('images/abc.png')}}"  class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <figcaption>
+                                        <h3><big>EDUCATION</big></h3>
+                                        {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
+                                        <a class="btn inner-link btn-black btn-small" href="{{ route('blog.categorywise', 'education') }}">Explore Now</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
                         </ul>
                         <!-- end tour grid -->
                     </div>
