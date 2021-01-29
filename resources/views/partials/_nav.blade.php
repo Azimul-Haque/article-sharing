@@ -55,7 +55,7 @@
                                 Travel ▽
                             </a>
                             <ul id="nav_travel" class="dropdown-menu panel-collapse collapse" role="menu">
-                                <li><a href="{{ route('blog.categorywise', 'dhaka') }}"><i class="icon-map-pin i-plain"></i> Dhaka</a></li>
+                                <li><a href="{{ route('blog.categorywise', 'bangladesh') }}"><i class="icon-map-pin i-plain"></i> Bangladesh</a></li>
                                 <li><a href="{{ route('blog.categorywise', 'world-wide') }}"><i class="icon-map-pin i-plain"></i> World Wide</a></li>
                             </ul>
                         </li>
