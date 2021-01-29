@@ -76,17 +76,73 @@
                     <div class="tab-content">
                         <!-- tour grid -->
                         <ul class="grid masonry-items">
-                            <li class="completed wow fadeInLeft" data-wow-duration="900ms">
+                            <li class="completed wow fadeInLeft" data-wow-duration="300ms">
                                 <figure>
                                     <div class="gallery-img">
                                         <a href="{{ route('blog.categorywise', 'education') }}">
-                                            <img src="{{ asset('images/abc.png')}}"  class="img-responsive" />
+                                            <img src="{{ asset('images/categories/education.jpg')}}"  class="img-responsive" />
                                         </a>
                                     </div>
                                     <figcaption>
                                         <h3><big>EDUCATION</big></h3>
                                         {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
                                         <a class="btn inner-link btn-black btn-small" href="{{ route('blog.categorywise', 'education') }}">Explore Now</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="completed wow fadeInLeft" data-wow-duration="600ms">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="{{ route('blog.categorywise', 'business') }}">
+                                            <img src="{{ asset('images/categories/business.jpg')}}"  class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <figcaption>
+                                        <h3><big>BUSINESS</big></h3>
+                                        {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
+                                        <a class="btn inner-link btn-black btn-small" href="{{ route('blog.categorywise', 'business') }}">Explore Now</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="completed wow fadeInLeft" data-wow-duration="900ms">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="{{ route('blog.categorywise', 'historical-place') }}">
+                                            <img src="{{ asset('images/categories/historical.jpg')}}"  class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <figcaption>
+                                        <h3><big>HISTORICAL PLACE</big></h3>
+                                        {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
+                                        <a class="btn inner-link btn-black btn-small" href="{{ route('blog.categorywise', 'historical-place') }}">Explore Now</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="completed wow fadeInLeft" data-wow-duration="1200ms">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="{{ route('blog.categorywise', 'travel') }}">
+                                            <img src="{{ asset('images/categories/travel.jpg')}}"  class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <figcaption>
+                                        <h3><big>TRAVEL</big></h3>
+                                        {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
+                                        <a class="btn inner-link btn-black btn-small" href="{{ route('blog.categorywise', 'travel') }}">Explore Now</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="completed wow fadeInLeft" data-wow-duration="1500ms">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="{{ route('blog.categorywise', 'biography') }}">
+                                            <img src="{{ asset('images/categories/biography.jpg')}}"  class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <figcaption>
+                                        <h3><big>BIOGRAPHY</big></h3>
+                                        {{-- <p class="project-min-height">{{ substr(strip_tags($project->title), 0, 50) }}...</p> --}}
+                                        <a class="btn inner-link btn-black btn-small" href="{{ route('blog.categorywise', 'biography') }}">Explore Now</a>
                                     </figcaption>
                                 </figure>
                             </li>
@@ -205,10 +261,10 @@
             <div class="row">
                 <!-- post item -->
                 @php
-                    $eventwaitduration = 300;
+                    $eventwaitduration = 600;
                 @endphp
                 @foreach($blogs as $blog)
-                <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-duration="{{ $eventwaitduration }}ms">
+                <div class="col-md-4 col-sm-4 wow fadeInRight blog-listing" data-wow-duration="{{ $eventwaitduration }}ms">
                     <div class="blog-image">
                         <a href="{{ route('blog.single', $blog->slug) }}">
                             @if($blog->featured_image != null)

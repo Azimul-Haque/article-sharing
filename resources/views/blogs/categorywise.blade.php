@@ -9,7 +9,26 @@
 
 @section('content')
     <!-- head section -->
-    <section class="content-top-margin page-title page-title-small bg-gray">
+    <section class="content-top-margin page-title parallax3 parallax-fix page-title-large" style="background: url(&quot;/images/cat_back.jpg&quot;) 50% 0px;">
+        <div class="opacity-medium bg-black"></div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center animated fadeInUp">
+                    <div class="separator-line bg-yellow no-margin-top margin-four"></div>
+                    <!-- page title -->
+                    <h1 class="white-text">{{ $name }}</h1>
+                    <!-- end page title -->
+                    <!-- page title tagline -->
+                    <span class="white-text">
+                        <a href="{{ route('index.index') }}" class="white-text">Home</a> | <a href="{{ route('blogs.index') }}" class="white-text">Article</a>
+                    </span>
+                    <!-- end title tagline -->
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- <section class="content-top-margin page-title page-title-small bg-gray">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-12 wow fadeInUp" data-wow-duration="300ms">
@@ -27,7 +46,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end head section -->
 
     <!-- content section -->
