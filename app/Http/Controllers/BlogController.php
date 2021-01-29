@@ -215,8 +215,13 @@ class BlogController extends Controller {
                         ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
                         ->orderBy('created_at', 'DESC')
                         ->get();
-        $category = Category::where('name', $name)->first();
-        $blogs = Blog::where('category_id', $category->id)->orderBy('id', 'desc')->paginate(7);
+        if($name = 'historical-place') {
+          $blogs = Blog::whereIn('category_id', [3,4,5,6,7,8,9,10])->orderBy('id', 'desc')->paginate(7);
+        } else {
+          $category = Category::where('name', $name)->first();
+          $blogs = Blog::where('category_id', $category->id)->orderBy('id', 'desc')->paginate(7);
+        }
+        
         return view('blogs.categorywise')
                   ->withName($name)
                   ->withBlogs($blogs)
