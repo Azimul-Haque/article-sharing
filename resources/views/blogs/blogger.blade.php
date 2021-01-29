@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('title')
-    Killa Consultancy | {{ $blogger->name }}
+    TenX | {{ $blogger->name }}
 @endsection
 
 @section('css')

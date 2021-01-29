@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('title')
-    Killa Consultancy | Create New Blog
+    TenX | Create New Blog
 @endsection
 
 @section('css')

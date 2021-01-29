@@ -218,9 +218,9 @@ class BlogController extends Controller {
         if($name == 'Historical Place') {
           $blogs = Blog::whereIn('category_id', [3,4,5,6,7,8,9,10])->orderBy('id', 'desc')->paginate(7);
         } elseif($name == 'Travel') {
-          $blogs = Blog::whereIn('category_id', [3,4,5,6,7,8,9,10])->orderBy('id', 'desc')->paginate(7);
-        }elseif($name == 'Historical Place') {
-          $blogs = Blog::whereIn('category_id', [3,4,5,6,7,8,9,10])->orderBy('id', 'desc')->paginate(7);
+          $blogs = Blog::whereIn('category_id', [11,12])->orderBy('id', 'desc')->paginate(7);
+        }elseif($name == 'Biography') {
+          $blogs = Blog::whereIn('category_id', [13,14,15,16,17,18,10])->orderBy('id', 'desc')->paginate(7);
         } else {
           $category = Category::where('name', $name)->first();
           $blogs = Blog::where('category_id', $category->id)->orderBy('id', 'desc')->paginate(7);

@@ -109,7 +109,7 @@
                     <h5>About Us</h5>
                     <!-- end headline -->
                     <!-- text -->
-                    <p class="footer-text">We are KILLA: An independent Asian consulting organization with a strong focus on the Climate and Disaster. Our consultants use indigenous knowledge and expertise to create sustainable solutions for a resilient future.</p>
+                    <p class="footer-text">Tenx is a name of such Organization that runs or leads something 10x speed. This is mainly an information based website of our organization. We collect information and spread it out for the people or the clients worldwide.</p>
                     <!-- end text -->
                 </div>
                 
@@ -126,13 +126,10 @@
                             <a href="{{ route('index.about') }}">About Us</a>
                         </li>
                         <li>
-                            <a href="{{ route('index.projects') }}">Projects</a>
+                            <a href="{{ route('blogs.index') }}">Articles</a>
                         </li>
                         <li>
-                            <a href="{{ route('index.publications') }}">Publications</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index.employees') }}">People</a>
+                            <a href="{{ route('index.contact') }}">Contact</a>
                         </li>
                     </ul>
                     <!-- end link -->
@@ -143,21 +140,11 @@
                 <div class="col-md-6 col-sm-12 sm-text-center sm-margin-bottom-four">
                     <!-- link -->
                     <ul class="list-inline footer-link text-uppercase">
-                        <li>
-                            <a href="{{ route('blogs.index') }}">Blog</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index.projects') }}">Projects</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index.publications') }}">Publications</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index.disasterdata') }}">Data</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index.contact') }}">Contact</a>
-                        </li>
+                        <li><a href="{{ route('blog.categorywise', 'education') }}">Education</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'business') }}">Business</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'historical-place') }}">Historical Place</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'travel') }}">Travel</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'biography') }}">Biographye</a></li>
                     </ul>
                     <!-- end link -->
                 </div>
