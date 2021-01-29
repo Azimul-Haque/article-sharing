@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('title')
-    Knowledge, Information & Learning for Local Adaptation (KILLA)
+    Tenx | Tenx is a name of such Organization that runs or leads something 10x speed
 @endsection
 
 @section('css')

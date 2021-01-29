@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>@yield('title') | Knowledge, Information & Learning for Local Adaptation (KILLA)</title>
+    <title>@yield('title') | TenX | TenX is a name of such Organization that runs or leads something 10x speed</title>
     <meta name="description" content="A globally leading organization providing productive and technologically sustainable solutions for reshaping today and constructing a resilient tomorrow. Knowledge, Information & Learning for Local Adaptation (KILLA) ">
     <meta name="keywords" content="Killa, Killa Consultancy, Killa BD, KillaBD, Knowledge, Information & Learning for Local Adaptation (KILLA)">
     <meta charset="utf-8">
@@ -194,7 +194,7 @@
                     <!-- logo -->
                     <div class="col-md-6 col-sm-6 col-xs-12 footer-logo text-right xs-text-center">
                         <a href="{{ route('index.index') }}">
-                            <img src="{{ asset('images/logo.png') }}" alt="" />
+                            <img src="{{ asset('images/logo-light.png') }}" alt="" />
                         </a>
                     </div>
                     <!-- end logo -->
