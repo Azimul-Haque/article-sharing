@@ -3,8 +3,8 @@
 
 <head>
     <title>@yield('title') | TenX | TenX is a name of such Organization that runs or leads something 10x speed</title>
-    <meta name="description" content="A globally leading organization providing productive and technologically sustainable solutions for reshaping today and constructing a resilient tomorrow. Knowledge, Information & Learning for Local Adaptation (KILLA) ">
-    <meta name="keywords" content="Killa, Killa Consultancy, Killa BD, KillaBD, Knowledge, Information & Learning for Local Adaptation (KILLA)">
+    <meta name="description" content="TenX is a name of such Organization that runs or leads something 10x speed. Developed by A. H. M. Azimul Haque">
+    <meta name="keywords" content="TenX, TenX Speed">
     <meta charset="utf-8">
     <meta name="author" content="A. H. M. Azimul Haque">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
