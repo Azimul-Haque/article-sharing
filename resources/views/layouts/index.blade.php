@@ -88,7 +88,7 @@
                     <!-- address -->
                     <div class="col-md-4 col-sm-4 text-center">
                         <i class="icon-map-pin small-icon black-text"></i>
-                        <h6 class="black-text margin-two no-margin-bottom">272/5, West Agargaon,  Sher-E-Bangla Nagar, Dhaka-1207</h6>
+                        <h6 class="black-text margin-two no-margin-bottom">Dhaka, Bangladesh</h6>
                     </div>
                     <!-- end address -->
                     <!-- email -->
@@ -247,7 +247,5 @@
      });
     </script>
 </body>
-
-<!-- Mirrored from www.themezaa.com/html/h-code/portfolio-short-description.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Sep 2018 20:27:12 GMT -->
 
 </html>
