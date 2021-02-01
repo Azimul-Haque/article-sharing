@@ -65,11 +65,17 @@ class IndexController extends Controller
 
     public function getAbout()
     {
-        $strategies = Strategy::orderBy('id', 'desc')->get();
-        $expertises = Expertise::orderBy('id', 'desc')->get();
+        // $strategies = Strategy::orderBy('id', 'desc')->get();
+        // $expertises = Expertise::orderBy('id', 'desc')->get();
+        $people = User::where('type', 'Director')
+                      ->orWhere('type', 'CEO')
+                      ->where('activation_status', 1)->get();
+                      
         return view('index.about')
-                        ->withStrategies($strategies)
-                        ->withExpertises($expertises);
+                        ->withPeople($people);
+
+                        // ->withStrategies($strategies)
+                        // ->withExpertises($expertises);
     }
 
     public function getExpertise($slug)
@@ -81,7 +87,8 @@ class IndexController extends Controller
     public function getDirectors()
     {
         $people = User::where('type', 'Director')
-                         ->where('activation_status', 1)->get();
+                      ->orWhere('type', 'CEO')
+                      ->where('activation_status', 1)->get();
         return view('index.people')->withPeople($people);
     }
 
