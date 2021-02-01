@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('title')
-    Tenx | Tenx is a name of such Organization that runs or leads something 10x speed
+    {{-- Tenx | Tenx is a name of such Organization that runs or leads something 10x speed --}}
 @endsection
 
 @section('css')
