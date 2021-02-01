@@ -142,7 +142,7 @@
                     <ul class="list-inline footer-link text-uppercase">
                         <li><a href="{{ route('blog.categorywise', 'education') }}">Education</a></li>
                         <li><a href="{{ route('blog.categorywise', 'business') }}">Business</a></li>
-                        <li><a href="{{ route('blog.categorywise', 'historical-place') }}">Historical Place</a></li>
+                        <li><a href="{{ route('blog.categorywise', 'historical-place') }}">Historical</a></li>
                         <li><a href="{{ route('blog.categorywise', 'travel') }}">Travel</a></li>
                         <li><a href="{{ route('blog.categorywise', 'biography') }}">Biographye</a></li>
                     </ul>
