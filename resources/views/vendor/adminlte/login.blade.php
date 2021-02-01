@@ -61,11 +61,11 @@
                    class="text-center"
                 >{{ trans('adminlte::adminlte.i_forgot_my_password') }}</a>
                 <br>
-                @if (config('adminlte.register_url', 'register'))
+                {{-- @if (config('adminlte.register_url', 'register'))
                     <a href="{{ route('index.application') }}"
                        class="text-center"
                     >Create Account</a>
-                @endif
+                @endif --}}
             </div>
         </div>
         <!-- /.login-box-body -->
