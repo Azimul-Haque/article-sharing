@@ -33,21 +33,21 @@
           <td>{{ $message->email }}</td>
           <td>{{ $message->message }}</td>
           <td>
-            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $message->id }}" data-backdrop="static" title="Delete Article"><i class="fa fa-trash-o"></i></button>
-            <!-- Delete Publication Modal -->
-            <!-- Delete Publication Modal -->
+            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $message->id }}" data-backdrop="static" title="Delete Message"><i class="fa fa-trash-o"></i></button>
+            <!-- Delete Modal -->
+            <!-- Delete Modal -->
             <div class="modal fade" id="deleteModal{{ $message->id }}" role="dialog">
               <div class="modal-dialog modal-md">
                 <div class="modal-content">
                   <div class="modal-header modal-header-danger">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Delete Article</h4>
+                    <h4 class="modal-title">Delete Message</h4>
                   </div>
                   <div class="modal-body">
-                    Confirm Delete this Publication: <b>{{ $message->title }}</b>?
+                    Confirm Delete this Message?
                   </div>
                   <div class="modal-footer">
-                    {!! Form::model($message, ['route' => ['dashboard.publication.delete', $message->id], 'method' => 'DELETE', 'class' => 'form-default', 'enctype' => 'multipart/form-data']) !!}
+                    {!! Form::model($message, ['route' => ['dashboard.deletecontactmessage', $message->id], 'method' => 'DELETE', 'class' => 'form-default', 'enctype' => 'multipart/form-data']) !!}
                         {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     {!! Form::close() !!}
@@ -55,8 +55,8 @@
                 </div>
               </div>
             </div>
-            <!-- Delete Publication Modal -->
-            <!-- Delete Publication Modal -->
+            <!-- Delete Modal -->
+            <!-- Delete Modal -->
           </td>
         </tr>
         @endforeach

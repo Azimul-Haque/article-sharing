@@ -97,6 +97,7 @@ Route::patch('/dashboard/applications/{id}/approve', ['as'=>'dashboard.approveap
 Route::delete('/dashboard/application/{id}', ['as'=>'dashboard.deleteapplication','uses'=>'DashboardController@deleteApplication']);
 
 Route::get('/dashboard/contact/messages', ['as'=>'dashboard.contactmessages','uses'=>'DashboardController@getContactMessage']);
+Route::delete('/dashboard/contact/messages/{id}/delete', ['as'=>'dashboard.deletecontactmessage','uses'=>'DashboardController@deleteContactMessage']);
 
 Route::get('/dashboard/sliders', ['as'=>'dashboard.sliders','uses'=>'DashboardController@getSliders']);
 Route::post('/dashboard/slider/store', ['as'=>'dashboard.slider.store','uses'=>'DashboardController@storeSlider']);

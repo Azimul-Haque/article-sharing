@@ -45,8 +45,8 @@
           <td>
             <a href="{{ route('dashboard.publication.edit', $blog->id) }}" class="btn btn-sm btn-primary" title="Edit Article"><i class="fa fa-pencil"></i></a>
             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $blog->id }}" data-backdrop="static" title="Delete Article"><i class="fa fa-trash-o"></i></button>
-            <!-- Delete Publication Modal -->
-            <!-- Delete Publication Modal -->
+            <!-- Delete Modal -->
+            <!-- Delete Modal -->
             <div class="modal fade" id="deleteModal{{ $blog->id }}" role="dialog">
               <div class="modal-dialog modal-md">
                 <div class="modal-content">
@@ -66,8 +66,8 @@
                 </div>
               </div>
             </div>
-            <!-- Delete Publication Modal -->
-            <!-- Delete Publication Modal -->
+            <!-- Delete Modal -->
+            <!-- Delete Modal -->
           </td>
         </tr>
         @endforeach

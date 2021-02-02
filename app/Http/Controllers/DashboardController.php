@@ -424,7 +424,7 @@ class DashboardController extends Controller
         
         Session::flash('success', 'Deleted Successfully!');
         return redirect()->route('dashboard.expertises');
-    }   
+    }
 
     public function getSliders()
     {
@@ -1095,5 +1095,14 @@ class DashboardController extends Controller
     {
         $messages = Formmessage::orderBy('id', 'desc')->paginate(15);
         return view('dashboard.contactmessages')->withMessages($messages);
-    } 
+    }
+
+    public function deleteContactMessage($id)
+    {
+        $messages = Formmessage::find($id);
+        $messages->delete();
+        
+        Session::flash('success', 'Deleted Successfully!');
+        return redirect()->route('dashboard.contactmessages');
+    }
 }
