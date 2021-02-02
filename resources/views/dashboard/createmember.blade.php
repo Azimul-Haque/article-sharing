@@ -95,7 +95,7 @@
                     <div class="col-md-6">
                       <label for="bio" class="text-uppercase">Type</label><br/>
                       <label class="radio-inline"><input type="radio" name="type" value="Member" checked>Member</label>
-                      <label class="radio-inline"><input type="radio" name="type" value="Employee">Employee</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="CEO">CEO</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Director">Director</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Advisor">Advisor</label>
                     </div>

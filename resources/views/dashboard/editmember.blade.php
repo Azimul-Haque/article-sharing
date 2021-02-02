@@ -99,7 +99,7 @@
                     <div class="col-md-6">
                       <label for="bio" class="text-uppercase">Type</label><br/>
                       <label class="radio-inline"><input type="radio" name="type" value="Member" @if($member->type == 'Member') checked @endif>Member</label>
-                      <label class="radio-inline"><input type="radio" name="type" value="Employee" @if($member->type == 'Employee') checked @endif>Employee</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="CEO" @if($member->type == 'CEO') checked @endif>CEO</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Director" @if($member->type == 'Director') checked @endif>Director</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Advisor" @if($member->type == 'Advisor') checked @endif>Advisor</label>
                     </div>
