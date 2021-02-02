@@ -148,10 +148,16 @@
                         </a>
                     </li>
                     @if(Auth::user()->role == 'admin')
-                    <li class="{{ Request::is('dashboard/applications') ? 'active' : '' }}">
+                    {{-- <li class="{{ Request::is('dashboard/applications') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.applications') }}">
                             <i class="fa fa-fw fa-plus"></i>
                             <span>Applications</span>
+                        </a>
+                    </li> --}}
+                    <li class="{{ Request::is('dashboard/members') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard.members') }}">
+                            <i class="fa fa-fw fa-users"></i>
+                            <span>Users</span>
                         </a>
                     </li>
                     <li class="{{ Request::is('dashboard/contact/messages') ? 'active' : '' }}">
@@ -160,19 +166,20 @@
                             <span>Contact Messages</span>
                         </a>
                     </li>
-                    <li class="{{ Request::is('dashboard/members') ? 'active' : '' }}">
-                        <a href="{{ route('dashboard.members') }}">
-                            <i class="fa fa-fw fa-users"></i>
-                            <span>People</span>
-                        </a>
-                    </li>
+                    
                     <li class="{{ Request::is('dashboard/sliders') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.sliders') }}">
                             <i class="fa fa-fw fa-list-alt"></i>
                             <span>Sliders</span>
                         </a>
                     </li>
-                    <li class="{{ Request::is('dashboard/strategies') ? 'active' : '' }}">
+                    <li class="{{ Request::is('dashboard/blogs') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard.blogs') }}">
+                            <i class="fa fa-fw fa-book"></i>
+                            <span>Articles</span>
+                        </a>
+                    </li>
+                    {{-- <li class="{{ Request::is('dashboard/strategies') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.strategies') }}">
                             <i class="fa fa-fw fa-briefcase"></i>
                             <span>Strategies</span>
@@ -207,7 +214,7 @@
                             <i class="fa fa-fw fa-tree"></i>
                             <span>Data Description</span>
                         </a>
-                    </li>
+                    </li> --}}
                     @endif
                     <li class="header">Personal Profile</li>
                     <li class="{{ Request::is('dashboard/personal/profile') ? 'active' : '' }}">

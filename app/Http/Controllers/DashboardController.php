@@ -183,6 +183,12 @@ class DashboardController extends Controller
         return view('dashboard.blogs.index')->withBlogs($blogs);
     }
 
+    public function createBlogs()
+    {
+        $categories = Category::all();
+        return view('dashboard.blogs.create')->withCategories($categories);
+    }
+
     public function getMembers()
     {
         $directors = User::where('activation_status', 1)
