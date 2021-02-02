@@ -216,12 +216,18 @@
                             <span>Your Profile</span>
                         </a>
                     </li>
-                    <li class="{{ Request::is('dashboard/personal/publications') ? 'active' : '' }}">
+                    {{-- <li class="{{ Request::is('dashboard/personal/publications') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.personal.pubs') }}">
                             <i class="fa fa-fw fa-files-o"></i>
                             <span>Your Publications</span>
                         </a>
-                    </li>
+                    </li> --}}
+                    {{-- <li class="{{ Request::is('dashboard/personal/blogs') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard.personal.pubs') }}">
+                            <i class="fa fa-fw fa-files-o"></i>
+                            <span>Your Publications</span>
+                        </a>
+                    </li> --}}
                 </ul>
                 <!-- /.sidebar-menu -->
             </section>

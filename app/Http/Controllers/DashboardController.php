@@ -177,7 +177,8 @@ class DashboardController extends Controller
 
     public function getBlogs()
     {
-        return view('dashboard.index');
+        $publications = Publication::where('status', 1)->orderBy('id', 'desc')->paginate(10);
+        return view('dashboard.publications')->withPublications($publications);
     }
 
     public function getMembers()
