@@ -189,6 +189,13 @@ class DashboardController extends Controller
         return view('dashboard.blogs.create')->withCategories($categories);
     }
 
+    public function getPersonalBlogs()
+    {
+        $blogs = Blog::where('user_id', Auth::user()->id)
+                     ->orderBy('id', 'desc')->paginate(10);
+        return view('dashboard.blogs.index')->withBlogs($blogs);
+    }
+
     public function getMembers()
     {
         $members = User::where('activation_status', 1)
