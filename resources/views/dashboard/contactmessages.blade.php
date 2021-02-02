@@ -23,6 +23,7 @@
           <th width="20%">Name</th>
           <th width="20%">Email</th>
           <th>Message</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -31,6 +32,32 @@
           <td>{{ $message->name }}</td>
           <td>{{ $message->email }}</td>
           <td>{{ $message->message }}</td>
+          <td>
+            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $message->id }}" data-backdrop="static" title="Delete Article"><i class="fa fa-trash-o"></i></button>
+            <!-- Delete Publication Modal -->
+            <!-- Delete Publication Modal -->
+            <div class="modal fade" id="deleteModal{{ $message->id }}" role="dialog">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Delete Article</h4>
+                  </div>
+                  <div class="modal-body">
+                    Confirm Delete this Publication: <b>{{ $message->title }}</b>?
+                  </div>
+                  <div class="modal-footer">
+                    {!! Form::model($message, ['route' => ['dashboard.publication.delete', $message->id], 'method' => 'DELETE', 'class' => 'form-default', 'enctype' => 'multipart/form-data']) !!}
+                        {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    {!! Form::close() !!}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Delete Publication Modal -->
+            <!-- Delete Publication Modal -->
+          </td>
         </tr>
         @endforeach
       </tbody>

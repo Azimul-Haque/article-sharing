@@ -28,8 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        @php $addmodalflag = 0; $editmodalflag = 0; @endphp
-        @foreach($directors as $member)
+        @foreach($members as $member)
         <tr>
           <td>
             {{ $member->name }}
@@ -78,6 +77,7 @@
       </tbody>
     </table>
   </div>
+  {{ $members->links() }}
 @stop
 
 @section('js')

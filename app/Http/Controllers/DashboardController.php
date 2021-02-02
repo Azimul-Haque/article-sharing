@@ -191,23 +191,11 @@ class DashboardController extends Controller
 
     public function getMembers()
     {
-        $directors = User::where('activation_status', 1)
-                         ->where('type', 'Director')
-                         ->orderBy('id', 'desc')->get();
-        $advisors = User::where('activation_status', 1)
-                         ->where('type', 'Advisor')
-                         ->orderBy('id', 'desc')->get();
-        $employees = User::where('activation_status', 1)
-                         ->where('type', 'Employee')
-                         ->orderBy('id', 'desc')->get();
         $members = User::where('activation_status', 1)
-                         ->where('type', 'Member')
-                         ->orderBy('id', 'desc')->paginate(20);
+                         ->orderBy('id', 'desc')->paginate(10);
+
 
         return view('dashboard.members')
-                        ->withDirectors($directors)
-                        ->withAdvisors($advisors)
-                        ->withEmployees($employees)
                         ->withMembers($members);
     }
 
