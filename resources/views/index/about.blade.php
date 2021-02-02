@@ -55,7 +55,7 @@
                         <center>
                           <div class="team-member xs-no-padding">
                               <span class="hidden-xs"><br/><br/></span>
-                              <a href="{{ route('index.profile', $single->unique_key) }}">
+                              <a href="{{ route('blogger.profile', $single->unique_key) }}">
                                 <span class="team-name text-uppercase black-text display-block font-weight-600">{{ $single->name }}</span>
                               </a>
                               <span class="team-post text-uppercase letter-spacing-2 display-block">{{ $single->designation }}</span>
