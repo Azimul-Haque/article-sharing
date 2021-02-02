@@ -149,8 +149,8 @@
                                 <h5 class="widget-title">About The Author</h5>
                                 <a href="{{ route('blogger.profile', $blog->user->unique_key) }}"><p class="blog-date no-padding-top">{{ $blog->user->name }}</p></a>
                                 <p class="about-author-text no-margin">
-                                    {{ $blog->user->degree }} {{ $blog->user->batch }}, {{ $blog->user->passing_year }}<br/>
-                                    {{ $blog->user->designation }}, {{ $blog->user->current_job }}
+                                    {{ $blog->user->designation }}<br/>
+                                    {{ $blog->user->email }}
                                 </p>
                             </div>
                             <!-- end author text -->

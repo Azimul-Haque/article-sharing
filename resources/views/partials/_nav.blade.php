@@ -108,7 +108,7 @@
                                     <a href="{{ route('dashboard.index') }}"><i class="icon-speedometer i-plain"></i> Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('index.profile', Auth::user()->unique_key) }}"><i class="icon-profile-male i-plain"></i> Profile</a>
+                                    <a href="{{ route('blogger.profile', Auth::user()->unique_key) }}"><i class="icon-profile-male i-plain"></i> Profile</a>
                                 </li>
                                 <li>
                                     <a href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}"><i class="icon-key i-plain"></i> Logout</a>

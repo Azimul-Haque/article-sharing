@@ -18,8 +18,8 @@
                     <!-- end page title -->
                     <!-- page title tagline -->
                     <span class="">
-                      <i class="fa fa-graduation-cap" aria-hidden="true"></i> {{ $blogger->degree }} {{ ordinal($blogger->batch) }}, {{ $blogger->passing_year }}<br/>
-                      <i class="fa fa-briefcase" aria-hidden="true"></i> {{ $blogger->designation }}, {{ $blogger->current_job }}
+                      {{-- <i class="fa fa-graduation-cap" aria-hidden="true"></i> {{ $blogger->degree }} {{ ordinal($blogger->batch) }}, {{ $blogger->passing_year }}<br/> --}}
+                      <i class="fa fa-briefcase" aria-hidden="true"></i> {{ $blogger->designation }}
                     </span>
                     <!-- end title tagline -->
                     <div class="separator-line margin-three bg-black no-margin-lr sm-margin-top-three sm-margin-bottom-three no-margin-bottom "></div>
@@ -31,7 +31,7 @@
                     <!-- page title tagline -->
                     <span class="">
                       <i class="fa fa-envelope" aria-hidden="true"></i> {{ $blogger->email }}<br/>
-                      <i class="fa fa-phone" aria-hidden="true"></i> {{ $blogger->phone }}
+                      {{-- <i class="fa fa-phone" aria-hidden="true"></i> {{ $blogger->phone }} --}}
                     </span>
                     <!-- end title tagline -->
                     <div class="separator-line margin-three bg-black no-margin-lr sm-margin-top-three sm-margin-bottom-three no-margin-bottom"></div>
@@ -47,7 +47,7 @@
               <div class="text-center no-margin-top">
                   <a href="{{ $blogger->fb }}" class="btn social-icon social-icon-large button"><i class="fa fa-facebook"></i></a>
                   <a href="{{ $blogger->twitter }}" class="btn social-icon social-icon-large button"><i class="fa fa-twitter"></i></a>
-                  <a href="{{ $blogger->gplus }}" class="btn social-icon social-icon-large button"><i class="fa fa-google-plus"></i></a>
+                  {{-- <a href="{{ $blogger->gplus }}" class="btn social-icon social-icon-large button"><i class="fa fa-google-plus"></i></a> --}}
                   <a href="{{ $blogger->linkedin }}" class="btn social-icon social-icon-large button"><i class="fa fa-linkedin"></i></a>
               </div>
               <!-- end social icon -->
