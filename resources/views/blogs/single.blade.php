@@ -159,10 +159,10 @@
                     <!-- end about author -->
                     <!-- social icon -->
                     <div class="text-center border-bottom margin-ten padding-four no-margin-top">
-                        <a href="{{ $blog->user->fb }}" class="btn social-icon social-icon-large button"><i class="fa fa-facebook"></i></a>
+                       {{--  <a href="{{ $blog->user->fb }}" class="btn social-icon social-icon-large button"><i class="fa fa-facebook"></i></a>
                         <a href="{{ $blog->user->twitter }}" class="btn social-icon social-icon-large button"><i class="fa fa-twitter"></i></a>
                         <a href="{{ $blog->user->gplus }}" class="btn social-icon social-icon-large button"><i class="fa fa-google-plus"></i></a>
-                        <a href="{{ $blog->user->linkedin }}" class="btn social-icon social-icon-large button"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{ $blog->user->linkedin }}" class="btn social-icon social-icon-large button"><i class="fa fa-linkedin"></i></a> --}}
                     </div>
                     <!-- end social icon -->
                     <!-- blog comment -->

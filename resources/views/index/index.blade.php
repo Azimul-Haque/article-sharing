@@ -275,7 +275,7 @@
                         </a>
                     </div>
                     <div class="blog-details">
-                        <div class="blog-date"><a href="{{ route('blog.single', $blog->slug) }}">{{ $blog->user->name }}</a> | {{ date('F d, Y', strtotime($blog->created_at)) }}</div>
+                        <div class="blog-date"><a href="{{ route('blogger.profile', $blog->user->unique_key) }}">{{ $blog->user->name }}</a> | {{ date('F d, Y', strtotime($blog->created_at)) }}</div>
                         <div class="blog-title" style="min-height: 65px;"><a href="{{ route('blog.single', $blog->slug) }}">{{ $blog->title }}</a></div>
                         <div class="blog-short-description" style="text-align: justify; text-justify: inter-word; width: 100%; min-height: 120px;">
                             @if(strlen(strip_tags($blog->body))>300)
