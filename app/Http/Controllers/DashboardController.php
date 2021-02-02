@@ -16,6 +16,8 @@ use App\Disdata;
 use App\Slider;
 use App\Strategy;
 use App\Formmessage;
+use App\Blog;
+use App\Category;
 
 use Carbon\Carbon;
 use DB, Hash, Auth, Image, File, Session;
@@ -177,8 +179,8 @@ class DashboardController extends Controller
 
     public function getBlogs()
     {
-        $publications = Publication::where('status', 1)->orderBy('id', 'desc')->paginate(10);
-        return view('dashboard.publications')->withPublications($publications);
+        $blogs = Blog::orderBy('id', 'desc')->paginate(10);
+        return view('dashboard.blogs.index')->withBlogs($blogs);
     }
 
     public function getMembers()
