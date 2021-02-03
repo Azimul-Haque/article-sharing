@@ -33,6 +33,23 @@
             margin:-100px 0 0 -100px;
         }
     </style>
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesheet.css') }}"> --}}
+    <meta property="og:image" content="{{ asset('images/banner.jpg') }}" />
+    <meta property="og:title" content="Tenx | Tenx is a name of such Organization that runs or leads something 10x speed"/>
+    <meta name="description" property="og:description" content="TenX is a name of such Organization that runs or leads something 10x speed. Developed by A. H. M. Azimul Haque" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="{{ Request::url() }}" />
+    <meta property="og:site_name" content="TenX">
+    <meta property="og:locale" content="en_US">
+    <meta property="fb:admins" content="100001596964477">
+    <meta property="fb:app_id" content="163879201229487">
+    <meta property="og:type" content="article">
+    <!-- Open Graph - Article -->
+    <meta name="article:section" content="Article">
+    <meta name="article:published_time" content="2021">
+    <meta name="article:author" content="A. H. M. Azimul Haque">
+    <meta name="article:tag" content="Article">
+    <meta name="article:modified_time" content="{{ date('F d, Y') }}">
 @endsection
 
 @section('content')
