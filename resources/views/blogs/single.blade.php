@@ -8,7 +8,7 @@
     @if($blog->featured_image != null)
         <meta property="og:image" content="{{ asset('images/blogs/'.$blog->featured_image) }}" />
     @else
-        <meta property="og:image" content="{{ asset('images/banner.jpg') }}" />
+        <meta property="og:image" content="{{ asset('images/abc.png') }}" />
     @endif
 
     <meta property="og:title" content="{{ $blog->title }} | {{ $blog->user->name }}"/>
