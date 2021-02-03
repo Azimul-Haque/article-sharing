@@ -78,6 +78,16 @@ class IndexController extends Controller
                         // ->withExpertises($expertises);
     }
 
+    public function getPrivacy()
+    {                 
+        return view('index.privacy');
+    }
+
+    public function getTerms()
+    {                 
+        return view('index.terms');
+    }
+
     public function getExpertise($slug)
     {
         $expertise = Expertise::where('slug', $slug)->first();

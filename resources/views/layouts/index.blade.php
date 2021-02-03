@@ -82,7 +82,7 @@
                     <!-- phone -->
                     <div class="col-md-4 col-sm-4 text-center">
                         <i class="icon-phone small-icon black-text"></i>
-                        <h6 class="black-text margin-two no-margin-bottom"><a href="tel:+8801609586090">+880 1609-586090</a></h6>
+                        <h6 class="black-text margin-two no-margin-bottom"><a href="tel:+8801580323847">+88 01580-323847</a></h6>
                     </div>
                     <!-- end phone -->
                     <!-- address -->
@@ -140,29 +140,26 @@
                 <div class="col-md-6 col-sm-12 sm-text-center sm-margin-bottom-four">
                     <!-- link -->
                     <ul class="list-inline footer-link text-uppercase">
-                        <li><a href="{{ route('blog.categorywise', 'education') }}">Education</a></li>
-                        <li><a href="{{ route('blog.categorywise', 'business') }}">Business</a></li>
-                        <li><a href="{{ route('blog.categorywise', 'historical-place') }}">Historical</a></li>
-                        <li><a href="{{ route('blog.categorywise', 'travel') }}">Travel</a></li>
-                        <li><a href="{{ route('blog.categorywise', 'biography') }}">Biographye</a></li>
+                        <li><a href="{{ route('index.terms') }}">Terms & Conditions</a></li>
+                        <li><a href="{{ route('index.privacy') }}">Privacy Policy</a></li>
                     </ul>
                     <!-- end link -->
                 </div>
                 <div class="col-md-6 col-sm-12 footer-social text-right sm-text-center">
                     <!-- social media link -->
-                    <a target="_blank" href="https://www.facebook.com/killa.com.bd/">
+                    <a target="_blank" href="https://www.facebook.com/tenxconsultant">
                         <i class="fa fa-facebook"></i>
                     </a>
-                    <a target="_blank" href="https://twitter.com/killa_bd">
+                    <a target="_blank" href="#">
                         <i class="fa fa-twitter"></i>
                     </a>
                     {{-- <a target="_blank" href="https://plus.google.com/">
                         <i class="fa fa-google-plus"></i>
                     </a> --}}
-                    <a target="_blank" href="https://www.youtube.com/channel/UCiJb5gjwnU-2qkUx-nUlGmA?disable_polymer=true&nv=1">
+                    <a target="_blank" href="#">
                         <i class="fa fa-youtube"></i>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/company/killabd/">
+                    <a target="_blank" href="#">
                         <i class="fa fa-linkedin"></i>
                     </a>
                     <!-- end social media link -->
