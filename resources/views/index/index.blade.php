@@ -287,7 +287,7 @@
                             @if($blog->featured_image != null)
                             <img src="{{ asset('images/blogs/'.$blog->featured_image) }}" alt=""/>
                             @else
-                            <img src="{{ asset('images/600x315.png') }}" alt=""/>
+                            <img src="{{ asset('images/abc.png') }}" alt=""/>
                             @endif
                         </a>
                     </div>
