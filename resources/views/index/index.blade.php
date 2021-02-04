@@ -36,7 +36,7 @@
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesheet.css') }}"> --}}
     <meta property="og:image" content="{{ asset('images/banner.jpg') }}" />
     <meta property="og:title" content="Tenx | Tenx is a name of such Organization that runs or leads something 10x speed"/>
-    <meta name="description" property="og:description" content="TenX is a name of such Organization that runs or leads something 10x speed. Developed by A. H. M. Azimul Haque" />
+    <meta name="description" property="og:description" content="TenX Org is such an organization that runs or leads something on 10x speed. Developed by A. H. M. Azimul Haque" />
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:site_name" content="TenX">
