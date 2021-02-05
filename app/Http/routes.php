@@ -86,7 +86,7 @@ Route::get('/dashboard/events', ['as'=>'dashboard.events','uses'=>'DashboardCont
 Route::get('/dashboard/gallery', ['as'=>'dashboard.gallery','uses'=>'DashboardController@getGallery']);
 
 Route::get('/dashboard/blogs', ['as'=>'dashboard.blogs','uses'=>'DashboardController@getBlogs']);
-Route::get('/dashboard/blogs/create', ['as'=>'dashboard.blogs.create','uses'=>'DashboardController@createBlogs']);
+Route::get('/dashboard/blogs/create', ['as'=>'dashboard.blogs.create','uses'=>'DashboardController@createBlog']);
 
 Route::get('/dashboard/personal/blogs', ['as'=>'dashboard.blogs.personal','uses'=>'DashboardController@getPersonalBlogs']);
 

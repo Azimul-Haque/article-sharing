@@ -183,10 +183,15 @@ class DashboardController extends Controller
         return view('dashboard.blogs.index')->withBlogs($blogs);
     }
 
-    public function createBlogs()
+    public function createBlog()
     {
         $categories = Category::all();
         return view('dashboard.blogs.create')->withCategories($categories);
+    }
+
+    public function storeBlog(Request $request)
+    {
+        
     }
 
     public function getPersonalBlogs()
