@@ -14,7 +14,7 @@
     	      <div class="info-box">
     	        <span class="info-box-icon bg-aqua"><i class="fa fa-user-plus"></i></span>
     	        <div class="info-box-content">
-    	          <span class="info-box-text">Applications</span>
+    	          <span class="info-box-text">Articles</span>
     	          <span class="info-box-number">View List</span>
     	        </div>
     	      </div>
