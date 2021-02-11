@@ -181,8 +181,8 @@
           <div class="info-box">
             <span class="info-box-icon bg-red"><i class="fa fa-files-o"></i></span>
             <div class="info-box-content">
-              <span class="info-box-text">Your Publications</span>
-              <span class="info-box-number">Submit Publication</span>
+              <span class="info-box-text">Your Articles</span>
+              <span class="info-box-number">Submit Article</span>
             </div>
           </div>
         </a>
