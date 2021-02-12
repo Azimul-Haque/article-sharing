@@ -53,8 +53,8 @@
                     <!-- breadcrumb -->
                     <ul>
                         <li><a href="{{ route('index.index') }}">Home</a></li>
-                        <li><a href="{{ route('blogs.index') }}">Blog</a></li>
-                        <li>Single BLog</li>
+                        <li><a href="{{ route('blogs.index') }}">Article</a></li>
+                        <li>Single Article</li>
                     </ul>
                     <!-- end breadcrumb -->
                 </div>
@@ -168,7 +168,7 @@
                     <!-- blog comment -->
 
                     <div class="blog-comment-main xs-no-padding-top">
-                        <h5 class="widget-title">Blog Comments</h5>
+                        <h5 class="widget-title">Article Comments</h5>
                         <div class="row">
                             <div class="col-md-12">
                                 

@@ -21,7 +21,7 @@
                     <!-- breadcrumb -->
                     <ul>
                         <li><a href="{{ route('index.index') }}">Home</a></li>
-                        <li><a href="{{ route('blogs.index') }}">Blog</a></li>
+                        <li><a href="{{ route('blogs.index') }}">Article</a></li>
                     </ul>
                     <!-- end breadcrumb -->
                 </div>

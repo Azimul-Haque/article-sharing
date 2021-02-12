@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('title')
-    TenX | Create New Blog
+    TenX | Create New Article
 @endsection
 
 @section('css')

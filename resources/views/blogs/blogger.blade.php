@@ -58,7 +58,7 @@
     <!-- content section -->
     <section class="wow fadeIn">
       <div class="container">
-        <h2 class="text-center margin-three wow fadeInUp">Blogs by {{ $blogger->name }}</h2>
+        <h2 class="text-center margin-three wow fadeInUp">Articles by {{ $blogger->name }}</h2>
         <div class="row blog-masonry blog-masonry-2col no-transition">
           <!-- post item -->
           @php $counter = 1; @endphp

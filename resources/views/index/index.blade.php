@@ -271,7 +271,7 @@
             <div class="row">
                 <!-- call to action -->
                 <div class="col-md-7 col-sm-12 text-center center-col">
-                    <p class="title-large text-uppercase letter-spacing-1 black-text font-weight-600 wow fadeIn">Latest Blogs</p><br/><br/>
+                    <p class="title-large text-uppercase letter-spacing-1 black-text font-weight-600 wow fadeIn">Latest Articles</p><br/><br/>
                 </div>
                 <!-- end call to action -->
             </div>
