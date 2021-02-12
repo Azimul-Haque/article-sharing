@@ -46,7 +46,7 @@
 
               <div class="form-group no-margin-bottom">
                   <label for="slug" class="text-uppercase">Slug</label>
-                  <input class="form-control" type="text" name="slug" id="slug"  placeholder="Write a Slug (i. e this-is-a-post)" required="">
+                  <input class="form-control" type="text" name="slug" id="slug"  placeholder="Write a Slug (e.g. this-is-a-post)" required="">
               </div>
 
               <div class="form-group no-margin-bottom">
