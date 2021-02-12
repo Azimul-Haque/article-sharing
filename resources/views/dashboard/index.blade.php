@@ -12,7 +12,7 @@
     	  <div class="col-md-3 col-sm-6 col-xs-12">
     	    <a href="{{ route('dashboard.applications') }}">
     	      <div class="info-box">
-    	        <span class="info-box-icon bg-aqua"><i class="fa fa-user-plus"></i></span>
+    	        <span class="info-box-icon bg-aqua"><i class="fa fa-files-o"></i></span>
     	        <div class="info-box-content">
     	          <span class="info-box-text">Articles</span>
     	          <span class="info-box-number">View List</span>
@@ -61,7 +61,7 @@
 
     	<div class="row">
     	  <div class="col-md-3 col-sm-6 col-xs-12">
-    	    <a href="{{ route('dashboard.expertises') }}">
+    	    {{-- <a href="{{ route('dashboard.expertises') }}">
     	      <div class="info-box">
     	        <span class="info-box-icon bg-aqua"><i class="fa fa-flask"></i></span>
     	        <div class="info-box-content">
@@ -69,10 +69,10 @@
     	          <span class="info-box-number">View List</span>
     	        </div>
     	      </div>
-    	    </a>
+    	    </a> --}}
     	  </div>
     	  <div class="col-md-3 col-sm-6 col-xs-12">
-    	    <a href="{{ route('dashboard.projects') }}">
+    	    {{-- <a href="{{ route('dashboard.projects') }}">
     	      <div class="info-box">
     	        <span class="info-box-icon bg-red"><i class="fa fa-cogs"></i></span>
     	        <div class="info-box-content">
@@ -80,14 +80,14 @@
     	          <span class="info-box-number">View List</span>
     	        </div>
     	      </div>
-    	    </a>
+    	    </a> --}}
     	  </div>
 
     	  <!-- fix for small devices only -->
     	  <div class="clearfix visible-sm-block"></div>
 
     	  <div class="col-md-3 col-sm-6 col-xs-12">
-    	    <a href="{{ route('dashboard.publications.pending') }}">
+    	    {{-- <a href="{{ route('dashboard.publications.pending') }}">
     	      <div class="info-box">
     	        <span class="info-box-icon bg-green"><i class="fa fa-hourglass-half"></i></span>
     	        <div class="info-box-content">
@@ -95,10 +95,10 @@
     	          <span class="info-box-number">Add, Edit, Delete</span>
     	        </div>
     	      </div>
-    	    </a>
+    	    </a> --}}
     	  </div>
     	  <div class="col-md-3 col-sm-6 col-xs-12">
-    	    <a href="{{ route('dashboard.publications') }}">
+    	    {{-- <a href="{{ route('dashboard.publications') }}">
     	      <div class="info-box">
     	        <span class="info-box-icon bg-yellow"><i class="fa fa-book"></i></span>
     	        <div class="info-box-content">
@@ -106,13 +106,13 @@
     	          <span class="info-box-number">View List</span>
     	        </div>
     	      </div>
-    	    </a>
+    	    </a> --}}
     	  </div>
     	</div>
 
     	<div class="row">
     	  <div class="col-md-3 col-sm-6 col-xs-12">
-    	    <a href="{{ route('dashboard.disasterdatas') }}">
+    	    {{-- <a href="{{ route('dashboard.disasterdatas') }}">
     	      <div class="info-box">
     	        <span class="info-box-icon bg-aqua"><i class="fa fa-tree"></i></span>
     	        <div class="info-box-content">
@@ -120,7 +120,7 @@
     	          <span class="info-box-number">View List</span>
     	        </div>
     	      </div>
-    	    </a>
+    	    </a> --}}
     	  </div>
     	  <div class="col-md-3 col-sm-6 col-xs-12">
     	    {{-- <a href="{{ route('dashboard.members') }}">
@@ -179,7 +179,7 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="{{ route('dashboard.personal.pubs') }}">
           <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-files-o"></i></span>
+            <span class="info-box-icon bg-red"><i class="fa fa-file-text-o"></i></span>
             <div class="info-box-content">
               <span class="info-box-text">Your Articles</span>
               <span class="info-box-number">Submit Article</span>
