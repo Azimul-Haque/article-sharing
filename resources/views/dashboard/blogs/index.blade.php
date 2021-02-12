@@ -31,7 +31,7 @@
       <tbody>
         @foreach($blogs as $blog)
         <tr>
-          <td>{{ $blog->title }}</td>
+          <td><a href="{{ route('blog.single', $blog->slug) }}" target="_blank">{{ $blog->title }}</a></td>
           <td>{{ $blog->category->name }}</td>
           <td>{{ $blog->user->name }}</td>
           <td><b>{{ date('F d, Y', strtotime($blog->created_at)) }}</b></td>

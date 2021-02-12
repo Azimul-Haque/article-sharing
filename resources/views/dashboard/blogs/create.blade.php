@@ -22,7 +22,7 @@
     <div class="col-md-10 col-sm-10 col-xs-12">
       <div class="box box-success">
         <div class="box-body">
-          <form action="{{ route('blogs.store') }}" method="post" enctype='multipart/form-data'>
+          <form action="{{ route('dashboard.blogs.store') }}" method="post" enctype='multipart/form-data'>
               {!! csrf_field() !!}
               <div class="row">
                 <div class="col-md-6">
@@ -57,14 +57,14 @@
                 <div class="col-md-8">
                     <div class="form-group no-margin-bottom">
                         <label><strong>Featured Image (750 X 430 &amp; 300Kb Max): (Optional)</strong></label>
-                        <input type="file" id="image" name="featured_image">
+                        <input type="file" id="image" name="featured_image" accept="image/*">
                     </div>
                 </div>
                 <div class="col-md-4">
                   <img src="{{ asset('images/600x315.png')}}" id='img-upload' style="height: 200px; width: auto; padding: 5px;" class="img-responsive" />
                 </div>
               </div>
-              <button class="btn highlight-button-dark btn-bg btn-round margin-two no-margin-right" type="submit">Post Blog</button>
+              <button class="btn btn-success" type="submit">Post Article</button>
           </form>
         </div>
       </div>
