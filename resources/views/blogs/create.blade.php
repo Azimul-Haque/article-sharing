@@ -15,13 +15,6 @@
             <div class="row">
                 <div class="col-md-10 col-sm-10 col-xs-11 center-col login-box">
                     <h1 style="text-align: center">Create New Blog</h1>
-                    @if(Auth::user()->payment_status == 0)
-                      <br/>
-                      <br/>
-                      <center><h4 class="">After the successfull payment, you will get access to your blogger profile to create blogs and stuffs!</h4></center>
-                      <br/>
-                      <br/>
-                    @else
                     <form action="{{ route('blogs.store') }}" method="post" enctype='multipart/form-data'>
                         {!! csrf_field() !!}
                         <div class="form-group no-margin-bottom margin-two">
@@ -52,7 +45,6 @@
                         </div>
                         <button class="btn highlight-button-dark btn-bg btn-round margin-two no-margin-right" type="submit">Post Blog</button>
                     </form>
-                    @endif
                 </div>
             </div>
         </div>
