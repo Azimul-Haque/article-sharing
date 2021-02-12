@@ -34,13 +34,12 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group no-margin-bottom">
-                        <div class="form-group no-margin-bottom">
-                            <label for="publishing_date" class="text-uppercase">Publishing Date</label>
-                            <input class="form-control" type="text" name="publishing_date" id="publishing_date" data-field="date" autocomplete="off" required="">
-                        </div>
+                          <label for="publishing_date" class="text-uppercase">Publishing Date</label>
+                          <input class="form-control" type="text" name="publishing_date" id="publishing_date" data-field="date" autocomplete="off" required="">
                       </div>
                     </div>
                   </div>
+
                   <div class="form-group">
                     <label for="member_id">Reseach Associates</label><br/>
                     <select class="form-control multiple" name="member_ids[]" id="member_ids" multiple="" data-placeholder="Select Reseach Associates">
