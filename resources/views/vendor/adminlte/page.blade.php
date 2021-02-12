@@ -229,7 +229,7 @@
                     <li class="{{ Request::is('dashboard/personal/blogs') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.blogs.personal') }}">
                             <i class="fa fa-fw fa-pencil"></i>
-                            <span>Your Blogs</span>
+                            <span>Your Articles</span>
                         </a>
                     </li>
                     {{-- <li class="{{ Request::is('dashboard/personal/publications') ? 'active' : '' }}">
