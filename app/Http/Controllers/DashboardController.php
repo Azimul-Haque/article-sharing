@@ -203,16 +203,17 @@ class DashboardController extends Controller
         $blog              = new Blog;
         $blog->title       = $request->title;
         $blog->user_id     = Auth::user()->id;
-        $blog->slug        = str_replace(['?',':', '\\', '/', '*', ' '], '-', $request->slug). '-' .time();
+        $blog->slug        = str_replace(['?',':', '\\', '/', '*', ' '], '-', strtolower($request->slug)). '-' .time();
         $blog->category_id = $request->category_id;
         $blog->body        = Purifier::clean($request->body, 'youtube');
         
         // image upload
         if($request->hasFile('featured_image')) {
             $image      = $request->file('featured_image');
-            $filename   = str_replace(['?',':', '\\', '/', '*', ' '], '_',$request->title).time() .'.' . $image->getClientOriginalExtension();
+            $filename   = str_replace(['?',':', '\\', '/', '*', ' '], '-', strtolower($request->slug)). '-' .time() .'.' . $image->getClientOriginalExtension();
             $location   = public_path('images/blogs/'. $filename);
-            Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
+            // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
+            Image::make($image)->fit(600, 315)->save($location);
             $blog->featured_image = $filename;
         }
 
