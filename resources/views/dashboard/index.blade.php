@@ -161,7 +161,7 @@
     	  </div>
     	</div>
 
-    	<h4>Member Activity</h4>
+    	<h4>Member's Activity</h4>
     @endif
     
     <div class="row">
@@ -213,6 +213,5 @@
           </div>
         </a> --}}
       </div>
-    </div> 
-    
+    </div>
 @stop
