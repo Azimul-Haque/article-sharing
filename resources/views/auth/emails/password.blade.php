@@ -7,7 +7,7 @@
     
       <p style="font-size: 20px">
         To reset your password, please click below<br/>
-        <big><a href="{{ $link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}">Click Here</a></big><br/>
+        <big><a href="{{ $link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}"><b>Click Here</b></a></big><br/>
         Or,<br/>
         <a href="{{ $link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}" style="font-size: 13px;"> {{ $link }} </a>
       </p>
