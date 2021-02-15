@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'support@killabd.com', 'name' => 'Killa Consultancy'],
+    'from' => ['address' => 'support@tenxorg.com', 'name' => 'TenX'],
 
     /*
     |--------------------------------------------------------------------------
