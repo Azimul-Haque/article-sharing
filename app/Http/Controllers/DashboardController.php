@@ -224,10 +224,13 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.blogs');
     }
 
-    public function editBlog()
+    public function editBlog($id)
     {
         $categories = Category::all();
-        return view('dashboard.blogs.create')->withCategories($categories);
+        $blog = Blog::findOrFail($id);
+        return view('dashboard.blogs.edit')
+                        ->withCategories($categories)
+                        ->withBlog($blog);
     }
 
     public function getPersonalBlogs()
