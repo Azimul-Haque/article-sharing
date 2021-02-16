@@ -43,7 +43,7 @@
             @endif
           </td>
           <td>
-            <a href="{{ route('dashboard.publication.edit', $blog->id) }}" class="btn btn-sm btn-primary" title="Edit Article"><i class="fa fa-pencil"></i></a>
+            <a href="{{ route('dashboard.blogs.edit', $blog->id) }}" class="btn btn-sm btn-primary" title="Edit Article"><i class="fa fa-pencil"></i></a>
             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $blog->id }}" data-backdrop="static" title="Delete Article"><i class="fa fa-trash-o"></i></button>
             <!-- Delete Modal -->
             <!-- Delete Modal -->
