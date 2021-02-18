@@ -226,7 +226,26 @@ class DashboardController extends Controller
 
     public function editBlog($id)
     {
+        // KAAJ ACHE
+        // KAAJ ACHE
+        // KAAJ ACHE
+        $this->validate($request,array(
+            'title'          => 'required|max:255',
+            'slug'           => 'required|max:255|unique:blogs,slug',
+            'body'           => 'required',
+            'category_id'    => 'required|integer',
+            'featured_image' => 'sometimes|image|max:300'
+        ));
+
         $categories = Category::all();
+        $blog = Blog::findOrFail($id);
+        return view('dashboard.blogs.edit')
+                        ->withCategories($categories)
+                        ->withBlog($blog);
+    }
+
+    public function updateBlog(Request $request, $id)
+    {
         $blog = Blog::findOrFail($id);
         return view('dashboard.blogs.edit')
                         ->withCategories($categories)

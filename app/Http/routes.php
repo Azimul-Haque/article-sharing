@@ -89,6 +89,7 @@ Route::get('/dashboard/blogs', ['as'=>'dashboard.blogs','uses'=>'DashboardContro
 Route::get('/dashboard/blogs/create', ['as'=>'dashboard.blogs.create','uses'=>'DashboardController@createBlog']);
 Route::post('/dashboard/blogs/store', ['as'=>'dashboard.blogs.store','uses'=>'DashboardController@storeBlog']);
 Route::get('/dashboard/blogs/{id}/edit', ['as'=>'dashboard.blogs.edit','uses'=>'DashboardController@editBlog']);
+Route::put('/dashboard/blogs/{id}/update', ['as'=>'dashboard.blogs.update','uses'=>'DashboardController@updateBlog']);
 
 Route::get('/dashboard/personal/blogs', ['as'=>'dashboard.blogs.personal','uses'=>'DashboardController@getPersonalBlogs']);
 

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Add Publication')
+@section('title', 'Edit Article')
 
 @section('css')
   <link rel="stylesheet" type="text/css" href="{{ asset('vendor/summernote/summernote.css') }}">
@@ -10,7 +10,7 @@
 
 @section('content_header')
     <h1>
-      Add Article
+      Edit Article
       <div class="pull-right">
         
       </div>
@@ -22,7 +22,7 @@
     <div class="col-md-10 col-sm-10 col-xs-12">
       <div class="box box-success">
         <div class="box-body">
-          <form action="{{ route('dashboard.blogs.store') }}" method="post" enctype='multipart/form-data'>
+          <form action="{{ route('dashboard.blogs.update', $blog->id) }}" method="put" enctype='multipart/form-data'>
               {!! csrf_field() !!}
               <div class="row">
                 <div class="col-md-6">
