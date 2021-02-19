@@ -161,6 +161,7 @@
                             <span>Articles</span>
                         </a>
                     </li>
+                    
                     <li class="header">Website Management</li>
                     <li class="{{ Request::is('dashboard/members') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.members') }}">
@@ -168,17 +169,16 @@
                             <span>Users</span>
                         </a>
                     </li>
-                    <li class="{{ Request::is('dashboard/contact/messages') ? 'active' : '' }}">
-                        <a href="{{ route('dashboard.contactmessages') }}">
-                            <i class="fa fa-fw fa-envelope-o"></i>
-                            <span>Contact Messages</span>
-                        </a>
-                    </li>
-                    
                     <li class="{{ Request::is('dashboard/sliders') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.sliders') }}">
                             <i class="fa fa-fw fa-list-alt"></i>
                             <span>Sliders</span>
+                        </a>
+                    </li>
+                    <li class="{{ Request::is('dashboard/contact/messages') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard.contactmessages') }}">
+                            <i class="fa fa-fw fa-envelope-o"></i>
+                            <span>Contact Messages</span>
                         </a>
                     </li>
 
