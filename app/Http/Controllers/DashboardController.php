@@ -33,7 +33,7 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('admin')->except(['index', 'getPersonalPubs', 'createPersonalPub', 'storePersonalPub', 'getPersonalProfile', 'updatePersonalProfile']);
+        $this->middleware('admin')->except(['index', 'getPersonalPubs', 'createPersonalPub', 'storePersonalPub', 'getPersonalProfile', 'updatePersonalProfile', 'getPersonalBlogs', 'createBlog', 'storeBlog', 'editBlog', 'updateBlog', 'deleteBlog']);
     }
 
     /**
@@ -230,11 +230,21 @@ class DashboardController extends Controller
 
     public function editBlog($id)
     {
-        $categories = Category::all();
-        $blog = Blog::findOrFail($id);
-        return view('dashboard.blogs.edit')
-                        ->withCategories($categories)
-                        ->withBlog($blog);
+        if(Auth::user()->role == 'admin') {
+            $categories = Category::all();
+            $blog = Blog::findOrFail($id);
+            return view('dashboard.blogs.edit')
+                            ->withCategories($categories)
+                            ->withBlog($blog);
+        } else {
+            $categories = Category::all();
+            $blog = Blog::where('id', $id)
+                        ->where('user_id', Auth::user()->id)
+                        ->first();
+            return view('dashboard.blogs.edit')
+                            ->withCategories($categories)
+                            ->withBlog($blog);
+        } 
     }
 
     public function updateBlog(Request $request, $id)
