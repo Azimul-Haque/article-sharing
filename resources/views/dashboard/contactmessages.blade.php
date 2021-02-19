@@ -33,7 +33,7 @@
           <td>{{ $message->name }}</td>
           <td>{{ $message->email }}</td>
           <td>{{ $message->message }}</td>
-          <td>{{ date('F d, Y', strtotime($message->created_at)) }}</td>
+          <td>{{ date('F d, Y h:i A', strtotime($message->created_at)) }}</td>
           <td>
             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $message->id }}" data-backdrop="static" title="Delete Message"><i class="fa fa-trash-o"></i></button>
             <!-- Delete Modal -->

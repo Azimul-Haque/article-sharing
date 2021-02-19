@@ -77,7 +77,7 @@
                         <div class="col-md-8">
                             <div class="form-group no-margin-bottom">
                                 <label><strong>Photo (300 X 300 &amp; 200Kb Max):</strong></label>
-                                <input class="form-control" type="file" id="image" name="image">
+                                <input class="form-control" type="file" id="image" accept="image/*" name="image">
                             </div>
                         </div>
                         <div class="col-md-4">

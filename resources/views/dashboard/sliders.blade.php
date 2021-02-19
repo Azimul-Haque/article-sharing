@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group no-margin-bottom">
                             <label><strong>Image (400Kb Max, 1000 x 520 Recommended):</strong></label>
-                            <input class="form-control" type="file" name="image" required="">
+                            <input class="form-control" type="file" name="image" accept="image/*" required="">
                         </div>
                       </div>
                       <div class="modal-footer">
@@ -115,7 +115,7 @@
               </div>
               <div class="form-group no-margin-bottom">
                   <label><strong>Image (400Kb Max, 1000 x 520 Recommended):</strong></label>
-                  <input class="form-control" type="file" id="image" name="image" required="">
+                  <input class="form-control" type="file" id="image" name="image" accept="image/*" required="">
               </div>
               <img src="{{ asset('images/abc.png')}}" id='img-upload' class="img-responsive" style="max-height: 200px; width: auto; padding: 5px;" /><br/>
               <button class="btn btn-primary" type="submit">Submit</button>
