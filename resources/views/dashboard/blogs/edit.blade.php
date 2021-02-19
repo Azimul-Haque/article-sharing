@@ -22,13 +22,13 @@
     <div class="col-md-10 col-sm-10 col-xs-12">
       <div class="box box-success">
         <div class="box-body">
-          <form action="{{ route('dashboard.blogs.update', $blog->id) }}" method="put" enctype='multipart/form-data'>
+          <form action="{{ route('dashboard.blogs.update', $blog->id) }}" method="post" enctype='multipart/form-data'>
               {!! csrf_field() !!}
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                       <label for="title" class="text-uppercase">Title</label>
-                      <input class="form-control" type="text" name="title" id="title" placeholder="Write Title" required="">
+                      <input class="form-control" type="text" name="title" id="title" value="{{ $blog->title }}" placeholder="Write Title" required="">
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -37,7 +37,7 @@
                       <select name="category_id" class="form-control" required="">
                           <option value="" selected="" disabled="">Category</option>
                           @foreach($categories as $category)
-                          <option value="{{ $category->id }}">{{ $category->name }}</option>
+                          <option value="{{ $category->id }}" @if($blog->category->id == $category->id) selected="" @endif>{{ $category->name }}</option>
                           @endforeach
                       </select>
                   </div>
@@ -46,12 +46,12 @@
 
               <div class="form-group no-margin-bottom">
                   <label for="slug" class="text-uppercase">Slug</label>
-                  <input class="form-control" type="text" name="slug" id="slug"  placeholder="Write a Slug (e.g. this-is-a-post)" required="">
+                  <input class="form-control" type="text" name="slug" id="slug" value="{{ $blog->slug }}" placeholder="Write a Slug (e.g. this-is-a-post)" required="">
               </div>
 
               <div class="form-group no-margin-bottom">
                   <label for="body" class="text-uppercase">Body</label>
-                  <textarea type="text" name="body" id="body" class="summernote" required=""></textarea>
+                  <textarea type="text" name="body" id="body" class="summernote" required="">{!! $blog->body !!}</textarea>
               </div>
               <div class="row margin-three">
                 <div class="col-md-8">
@@ -61,7 +61,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                  <img src="{{ asset('images/600x315.png')}}" id='img-upload' style="height: 200px; width: auto; padding: 5px;" class="img-responsive" />
+                  @if($blog->featured_image != null && file_exists(public_path('images/blogs/' . $blog->featured_image)))
+                    <img src="{{ asset('images/blogs/' . $blog->featured_image)}}" id='img-upload' style="height: 200px; width: auto; padding: 5px;" class="img-responsive"/>
+                  @else
+                    <img src="{{ asset('images/600x315.png') }}" id='img-upload' style="height: 200px; width: auto; padding: 5px;" class="img-responsive" />
+                  @endif
                 </div>
               </div>
               <button class="btn btn-success" type="submit">Post Article</button>
