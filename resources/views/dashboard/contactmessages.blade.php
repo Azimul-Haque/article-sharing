@@ -20,10 +20,11 @@
     <table class="table">
       <thead>
         <tr>
-          <th width="20%">Name</th>
-          <th width="20%">Email</th>
-          <th>Message</th>
-          <th>Action</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th width="35%">Message</th>
+          <th>Timestamp</th>
+          <th width="15%">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +33,7 @@
           <td>{{ $message->name }}</td>
           <td>{{ $message->email }}</td>
           <td>{{ $message->message }}</td>
+          <td>{{ date('F d, Y', strtotime($message->created_at)) }}</td>
           <td>
             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $message->id }}" data-backdrop="static" title="Delete Message"><i class="fa fa-trash-o"></i></button>
             <!-- Delete Modal -->
