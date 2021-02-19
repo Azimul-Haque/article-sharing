@@ -273,7 +273,12 @@ class IndexController extends Controller
          
         // (D) WRITE TEXT
         $txt = $capthcatext;
-        $font = "C:\Windows\Fonts\Arial.ttf"; // ! CHANGE THIS TO YOUR OWN !
+
+        $fontfiles = glob('fonts/*.*');
+        $fonts = array_rand($fontfiles);
+        $font = public_path($fontfiles[$fonts]);
+        // dd($font);
+        // $font = "C:\Windows\Fonts\Arial.ttf"; // ! CHANGE THIS TO YOUR OWN !
         // imagettftext(IMAGE, FONT SIZE, ANGLE, X, Y, COLOR, FONT, TEXT)
         imagettftext($img, 30, rand(-7, 7), rand(5, 25), 55, $textcolor, $font, $txt);
         header('Content-type: image/png');
