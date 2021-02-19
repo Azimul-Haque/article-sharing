@@ -246,7 +246,8 @@ class DashboardController extends Controller
                                 ->withCategories($categories)
                                 ->withBlog($blog);
             } else {
-                
+                Session::flash('warning', 'Don&#39;t be too clever!');
+                return redirect()->route('dashboard.blogs.personal');
             }
         }
     }
@@ -311,7 +312,12 @@ class DashboardController extends Controller
         $blog->delete();
 
         Session::flash('success', 'Deleted Successfully!');
-        return redirect()->route('dashboard.blogs');
+        //redirect
+        if(Auth::user()->role == 'admin') {
+            return redirect()->route('dashboard.blogs');
+        } else {
+            return redirect()->route('dashboard.blogs.personal');
+        }
     }
 
     public function getPersonalBlogs()
