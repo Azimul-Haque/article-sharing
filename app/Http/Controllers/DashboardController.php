@@ -221,7 +221,11 @@ class DashboardController extends Controller
 
         Session::flash('success', 'Article created successfully!');
         //redirect
-        return redirect()->route('dashboard.blogs');
+        if(Auth::user()->role == 'admin') {
+            return redirect()->route('dashboard.blogs');
+        } else {
+            return redirect()->route('dashboard.blogs.personal');
+        }
     }
 
     public function editBlog($id)
@@ -277,7 +281,7 @@ class DashboardController extends Controller
         if(Auth::user()->role == 'admin') {
             return redirect()->route('dashboard.blogs');
         } else {
-            return redirect()->route('dashboard.blogs');
+            return redirect()->route('dashboard.blogs.personal');
         }
         
     }
