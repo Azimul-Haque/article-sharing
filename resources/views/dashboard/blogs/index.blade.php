@@ -44,6 +44,7 @@
           </td>
           <td>
             <a href="{{ route('dashboard.blogs.edit', $blog->id) }}" class="btn btn-sm btn-primary" title="Edit Article"><i class="fa fa-pencil"></i></a>
+
             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ $blog->id }}" data-backdrop="static" title="Delete Article"><i class="fa fa-trash-o"></i></button>
             <!-- Delete Modal -->
             <!-- Delete Modal -->
@@ -55,10 +56,11 @@
                     <h4 class="modal-title">Delete Article</h4>
                   </div>
                   <div class="modal-body">
-                    Confirm Delete this Publication: <b>{{ $blog->title }}</b>?
+                    Confirm Delete this Publication:<br/>
+                    <b><big>{{ $blog->title }}</big></b>?
                   </div>
                   <div class="modal-footer">
-                    {!! Form::model($blog, ['route' => ['dashboard.publication.delete', $blog->id], 'method' => 'DELETE', 'class' => 'form-default', 'enctype' => 'multipart/form-data']) !!}
+                    {!! Form::model($blog, ['route' => ['dashboard.blogs.delete', $blog->id], 'method' => 'DELETE', 'class' => 'form-default', 'enctype' => 'multipart/form-data']) !!}
                         {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     {!! Form::close() !!}

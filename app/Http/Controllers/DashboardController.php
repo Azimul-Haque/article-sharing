@@ -245,7 +245,7 @@ class DashboardController extends Controller
             'featured_image' => 'sometimes|image|max:300'
         ));
 
-        //store to DB
+        //update to DB
         $blog->title       = $request->title;
         // $blog->user_id     = Auth::user()->id;
         if($blog->slug == $request->slug) {
@@ -275,6 +275,27 @@ class DashboardController extends Controller
         Session::flash('success', 'Article updated successfully!');
         //redirect
         return redirect()->route('dashboard.blogs');
+    }
+
+    public function deleteBlog($id)
+    {
+        $publication = Publication::find($id);
+        $file_path = public_path('files/'. $publication->file);
+        if(File::exists($file_path)) {
+            File::delete($file_path);
+        }
+        $image_path = public_path('images/publications/'. $publication->image);
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
+        foreach ($publication->users as $key => $value) {
+            # code...
+        }
+        $publication->users()->sync([]);
+        $publication->delete();
+
+        Session::flash('success', 'Deleted Successfully!');
+        return redirect()->route('dashboard.publications');
     }
 
     public function getPersonalBlogs()

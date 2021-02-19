@@ -90,6 +90,7 @@ Route::get('/dashboard/blogs/create', ['as'=>'dashboard.blogs.create','uses'=>'D
 Route::post('/dashboard/blogs/store', ['as'=>'dashboard.blogs.store','uses'=>'DashboardController@storeBlog']);
 Route::get('/dashboard/blogs/{id}/edit', ['as'=>'dashboard.blogs.edit','uses'=>'DashboardController@editBlog']);
 Route::post('/dashboard/blogs/{id}/update', ['as'=>'dashboard.blogs.update','uses'=>'DashboardController@updateBlog']);
+Route::delete('/dashboard/blogs/{id}/delete', ['as'=>'dashboard.blogs.delete','uses'=>'DashboardController@deleteBlog']);
 
 Route::get('/dashboard/personal/blogs', ['as'=>'dashboard.blogs.personal','uses'=>'DashboardController@getPersonalBlogs']);
 
