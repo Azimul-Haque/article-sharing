@@ -45,10 +45,10 @@
             <div>
               <!-- social icon -->
               <div class="text-center no-margin-top">
-                  <a href="{{ $blogger->fb }}" class="btn social-icon social-icon-large button"><i class="fa fa-facebook"></i></a>
-                  <a href="{{ $blogger->twitter }}" class="btn social-icon social-icon-large button"><i class="fa fa-twitter"></i></a>
-                  {{-- <a href="{{ $blogger->gplus }}" class="btn social-icon social-icon-large button"><i class="fa fa-google-plus"></i></a> --}}
-                  <a href="{{ $blogger->linkedin }}" class="btn social-icon social-icon-large button"><i class="fa fa-linkedin"></i></a>
+                  <a href="{{ $blogger->fb }}" class="btn social-icon social-icon-large button" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="{{ $blogger->twitter }}" class="btn social-icon social-icon-large button" target="_blank"><i class="fa fa-twitter"></i></a>
+                  {{-- <a href="{{ $blogger->gplus }}" class="btn social-icon social-icon-large button" target="_blank"><i class="fa fa-google-plus"></i></a> --}}
+                  <a href="{{ $blogger->linkedin }}" class="btn social-icon social-icon-large button" target="_blank"><i class="fa fa-linkedin"></i></a>
               </div>
               <!-- end social icon -->
             </div>
@@ -71,9 +71,11 @@
           @endif
           >
               @if($blog->featured_image != null)
-              <div class="blog-image"><a href="{{ route('blog.single', $blog->slug) }}">
-                <img src="{{ asset('images/blogs/'.$blog->featured_image) }}" alt=""/></a>
-              </div>
+                <div class="blog-image">
+                  <a href="{{ route('blog.single', $blog->slug) }}">
+                    <img src="{{ asset('images/blogs/'.$blog->featured_image) }}" class="img-responsive" alt="Article's Featured Image"/>
+                  </a>
+                </div>
               @endif
               <div class="blog-details">
                   <div class="blog-date">{{ date('F d, Y', strtotime($blog->created_at)) }} | 

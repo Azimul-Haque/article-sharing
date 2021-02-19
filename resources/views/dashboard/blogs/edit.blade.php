@@ -68,7 +68,7 @@
                   @endif
                 </div>
               </div>
-              <button class="btn btn-success" type="submit">Post Article</button>
+              <button class="btn btn-success" type="submit">Update Article</button>
           </form>
         </div>
       </div>

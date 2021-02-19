@@ -31,7 +31,7 @@
       <tbody>
         @foreach($blogs as $blog)
         <tr>
-          <td><a href="{{ route('blog.single', $blog->slug) }}" target="_blank">{{ $blog->title }}</a></td>
+          <td><a href="{{ route('blog.single', $blog->slug) }}" title="View this Article" target="_blank">{{ $blog->title }}</a></td>
           <td>{{ $blog->category->name }}</td>
           <td>{{ $blog->user->name }}</td>
           <td><b>{{ date('F d, Y', strtotime($blog->created_at)) }}</b></td>
@@ -56,7 +56,7 @@
                     <h4 class="modal-title">Delete Article</h4>
                   </div>
                   <div class="modal-body">
-                    Confirm Delete this Publication:<br/>
+                    Confirm Delete this Article:<br/>
                     <b><big>{{ $blog->title }}</big></b>?
                   </div>
                   <div class="modal-footer">
