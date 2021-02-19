@@ -159,7 +159,7 @@
                     <a target="_blank" href="#">
                         <i class="fa fa-youtube"></i>
                     </a>
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="https://www.linkedin.com/in/ten-x-b54798203/">
                         <i class="fa fa-linkedin"></i>
                     </a>
                     <!-- end social media link -->
