@@ -241,10 +241,14 @@ class DashboardController extends Controller
             $blog = Blog::where('id', $id)
                         ->where('user_id', Auth::user()->id)
                         ->first();
-            return view('dashboard.blogs.edit')
-                            ->withCategories($categories)
-                            ->withBlog($blog);
-        } 
+            if(!empty($blog) || $blog != null) {
+                return view('dashboard.blogs.edit')
+                                ->withCategories($categories)
+                                ->withBlog($blog);
+            } else {
+                
+            }
+        }
     }
 
     public function updateBlog(Request $request, $id)
