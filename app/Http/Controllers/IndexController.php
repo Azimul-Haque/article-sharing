@@ -297,11 +297,10 @@ class IndexController extends Controller
             'name'                      => 'required|max:255',
             'email'                     => 'required|max:255',
             'message'                   => 'required|max:255',
-            'contact_sum_result_hidden'   => 'required',
-            'contact_sum_result'   => 'required'
+            'contact_capthcatext'       => 'required'
         ));
 
-        if($request->contact_sum_result_hidden == $request->contact_sum_result) {
+        if($request->contact_capthcatext == $request->hidden_capthcatext) {
             $message = new Formmessage;
             $message->name = htmlspecialchars(preg_replace("/\s+/", " ", ucwords($request->name)));
             $message->email = htmlspecialchars(preg_replace("/\s+/", " ", $request->email));
