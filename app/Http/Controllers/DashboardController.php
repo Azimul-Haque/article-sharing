@@ -258,7 +258,7 @@ class DashboardController extends Controller
         
         // image upload
         if($request->hasFile('featured_image')) {
-            $image_path = public_path('images/blogs/'. $blog->image);
+            $image_path = public_path('images/blogs/'. $blog->featured_image);
             if(File::exists($image_path)) {
                 File::delete($image_path);
             }
@@ -279,23 +279,16 @@ class DashboardController extends Controller
 
     public function deleteBlog($id)
     {
-        $publication = Publication::find($id);
-        $file_path = public_path('files/'. $publication->file);
-        if(File::exists($file_path)) {
-            File::delete($file_path);
-        }
-        $image_path = public_path('images/publications/'. $publication->image);
+        $blog = Blog::findOrFail($id);
+
+        $image_path = public_path('images/blogs/'. $blog->featured_image);
         if(File::exists($image_path)) {
             File::delete($image_path);
         }
-        foreach ($publication->users as $key => $value) {
-            # code...
-        }
-        $publication->users()->sync([]);
-        $publication->delete();
+        $blog->delete();
 
         Session::flash('success', 'Deleted Successfully!');
-        return redirect()->route('dashboard.publications');
+        return redirect()->route('dashboard.blogs');
     }
 
     public function getPersonalBlogs()
