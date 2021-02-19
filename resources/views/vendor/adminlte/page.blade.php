@@ -155,7 +155,7 @@
                         </a>
                     </li> --}}
                     <li class="header">Articles Management</li>
-                    <li class="{{ Request::is('dashboard/blogs') ? 'active' : '' }}">
+                    <li class="{{ Request::is('dashboard/blogs') ? 'active' : '' }} {{ Request::is('dashboard/blogs/*') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.blogs') }}">
                             <i class="fa fa-fw fa-book"></i>
                             <span>Articles</span>

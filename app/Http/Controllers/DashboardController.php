@@ -262,7 +262,6 @@ class DashboardController extends Controller
             if(File::exists($image_path)) {
                 File::delete($image_path);
             }
-            dd($image_path);
             $image      = $request->file('featured_image');
             $filename   = str_replace(['?',':', '\\', '/', '*', ' '], '-', strtolower($request->slug)) . '-' .time() . '.' . $image->getClientOriginalExtension();
             $location   = public_path('images/blogs/'. $filename);
