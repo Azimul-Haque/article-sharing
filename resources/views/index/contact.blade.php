@@ -63,6 +63,8 @@
                           $contact_num2 = rand(1,20);
                           $contact_sum_result_hidden = $contact_num1 + $contact_num2;
                         @endphp
+                        <img src="data:image/png;base64,{{ $imstr }}" style="height: 50px; width: auto;" />
+                        <input type="hidden" name="capthcatext" value="{{ $capthcatext }}">
                         <input type="hidden" name="contact_sum_result_hidden" value="{{ $contact_sum_result_hidden }}">
                         <input type="text" name="contact_sum_result" id="" class="form-control" placeholder="{{ $contact_num1 }} + {{ $contact_num2 }} = ?" required="">
                         

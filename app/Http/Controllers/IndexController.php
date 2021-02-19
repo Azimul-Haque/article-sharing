@@ -263,7 +263,27 @@ class IndexController extends Controller
 
     public function getContact()
     {
-        return view('index.contact');
+        $capthcatext= random_string(5);
+        $img = imagecreate(200, 80);
+         
+        $background = imagecolorallocate($img, rand(150, 255), rand(150, 255), rand(150, 255));
+        $textcolor = imagecolorallocate($img, rand(50, 150), rand(50, 150), rand(50, 150));
+        
+        imagefilledrectangle($img, 0, 0, 150, 80, $background);
+         
+        // (D) WRITE TEXT
+        $txt = $capthcatext;
+        $font = "C:\Windows\Fonts\Arial.ttf"; // ! CHANGE THIS TO YOUR OWN !
+        // imagettftext(IMAGE, FONT SIZE, ANGLE, X, Y, COLOR, FONT, TEXT)
+        imagettftext($img, 30, rand(-7, 7), rand(5, 25), 55, $textcolor, $font, $txt);
+        header('Content-type: image/png');
+        imagepng($img);
+        $imstr = base64_encode(ob_get_clean());
+        imagedestroy($img);
+
+        return view('index.contact')
+                    ->withCapthcatext($capthcatext)
+                    ->withImstr($imstr);
     }
 
     public function storeFormMessage(Request $request)

@@ -47,7 +47,7 @@
           </td>
           <td>
             <a class="btn btn-sm btn-primary" href="{{ route('dashboard.member.edit', $member->id) }}" title="Edit this Profile"><i class="fa fa-pencil"></i></a>
-            {{-- <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteMemberModal{{ $member->id }}" data-backdrop="static" title="Delete this Profile" disabled=""><i class="fa fa-trash-o"></i></button> --}}
+            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteMemberModal{{ $member->id }}" data-backdrop="static" title="Delete this Profile" disabled=""><i class="fa fa-trash-o"></i></button>
             <!-- Delete Member Modal -->
             <!-- Delete Member Modal -->
             <div class="modal fade" id="deleteMemberModal{{ $member->id }}" role="dialog">
