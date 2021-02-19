@@ -177,7 +177,7 @@
         </a>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="{{ route('dashboard.personal.pubs') }}">
+        <a href="{{ route('dashboard.blogs.personal') }}">
           <div class="info-box">
             <span class="info-box-icon bg-red"><i class="fa fa-file-text-o"></i></span>
             <div class="info-box-content">
