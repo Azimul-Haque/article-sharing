@@ -245,6 +245,8 @@
                 $(this).parent().html('<div class="youtibecontainer">'+tmp+'</div>');
             });
             $('.note-video-clip').addClass('youtubeiframe');
+            $('.note-video-clip').removeAttr('width');
+            $('.note-video-clip').removeAttr('height');
         });
     </script>
     @if(Auth::check())
