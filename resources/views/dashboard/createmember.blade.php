@@ -24,32 +24,30 @@
               <form action="{{ route('dashboard.member.store') }}" method="POST" enctype='multipart/form-data' data-parsley-validate="">
                   {!! csrf_field() !!}
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-group no-margin-bottom">
                           <label for="name" class="text-uppercase">Name</label>
                           <input class="form-control" type="text" name="name" id="name" required="">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-group no-margin-bottom">
                           <label for="email" class="text-uppercase">Email</label>
                           <input class="form-control" type="text" name="email" id="email" required="">
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-group no-margin-bottom">
                           <label for="phone" class="text-uppercase">Phone</label>
                           <input class="form-control" type="text" name="phone" id="phone" required="">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    {{-- <div class="col-md-6">
                       <div class="form-group no-margin-bottom">
                           <label for="designation" class="text-uppercase"> Designation</label>
                           <input class="form-control" type="text" name="designation" id="designation" required="">
                       </div>
-                    </div>
+                    </div> --}}
                   </div>
               
                   <div class="row">
@@ -94,12 +92,12 @@
                   <div class="row">
                     <div class="col-md-8">
                       <label for="bio" class="text-uppercase">Type</label><br/>
+                      <label class="radio-inline"><input type="radio" name="type" value="Member" checked>Member</label>
                       <label class="radio-inline"><input type="radio" name="type" value="CEO">CEO</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Director">Director</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Advisor">Advisor</label>
-                      <label class="radio-inline"><input type="radio" name="type" value="Member" checked>Member</label>
-                      <label class="radio-inline"><input type="radio" name="type" value="Content Creator" checked>Content Creator</label>
-                      <label class="radio-inline"><input type="radio" name="type" value="Intern" checked>Intern</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Content Creator">Content Creator</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Intern">Intern</label>
                     </div>
                     <div class="col-md-4">
                       <label for="bio" class="text-uppercase">Admin Role?</label><br/>

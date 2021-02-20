@@ -23,32 +23,30 @@
             <div class="box-body">
               {!! Form::model($member, ['route' => ['dashboard.member.update', $member->id], 'method' => 'PUT', 'class' => 'form-default', 'enctype' => 'multipart/form-data']) !!}
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-group no-margin-bottom">
                           <label for="name" class="text-uppercase">Name</label>
                           <input class="form-control" type="text" name="name" id="name" value="{{ $member->name }}" required="">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-group no-margin-bottom">
                           <label for="email" class="text-uppercase">Email</label>
                           <input class="form-control" type="text" name="email" id="email" value="{{ $member->email }}" required="">
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-group no-margin-bottom">
                           <label for="phone" class="text-uppercase">Phone</label>
                           <input class="form-control" type="text" name="phone" id="phone" value="{{ $member->phone }}" required="">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    {{-- <div class="col-md-6">
                       <div class="form-group no-margin-bottom">
                           <label for="designation" class="text-uppercase"> Designation</label>
                           <input class="form-control" type="text" name="designation" id="designation" value="{{ $member->designation }}" required="">
                       </div>
-                    </div>
+                    </div> --}}
                   </div>
               
                   <div class="row">
@@ -102,6 +100,8 @@
                       <label class="radio-inline"><input type="radio" name="type" value="CEO" @if($member->type == 'CEO') checked @endif>CEO</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Director" @if($member->type == 'Director') checked @endif>Director</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Advisor" @if($member->type == 'Advisor') checked @endif>Advisor</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Content Creator" @if($member->type == 'Content Creator') checked @endif>Content Creator</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Intern" @if($member->type == 'Intern') checked @endif>Intern</label>
                     </div>
                     <div class="col-md-6">
                       <label for="bio" class="text-uppercase">Admin Role?</label><br/>
