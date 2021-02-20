@@ -26,6 +26,22 @@
     <meta name="article:author" content="{{ Request::url('blogger/profile/'.$blog->user->unique_key) }}">
     <meta name="article:tag" content="{{ $blog->category->name }}">
     <meta name="article:modified_time" content="{{ $blog->updated_at}}">
+
+    <style type="text/css">
+        .youtibecontainer {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+        .youtubeiframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -222,6 +238,15 @@
 @endsection
 
 @section('js')
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.note-video-clip').each(function() {
+                var tmp = $(this).parent().html();
+                $(this).parent().html('<div class="youtibecontainer">'+tmp+'</div>');
+            });
+            $('.note-video-clip').addClass('youtubeiframe');
+        });
+    </script>
     @if(Auth::check())
     <script type="text/javascript">
         $(document).ready(function(){
