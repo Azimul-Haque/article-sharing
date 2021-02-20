@@ -19,7 +19,7 @@
                     <!-- page title tagline -->
                     <span class="">
                       {{-- <i class="fa fa-graduation-cap" aria-hidden="true"></i> {{ $blogger->degree }} {{ ordinal($blogger->batch) }}, {{ $blogger->passing_year }}<br/> --}}
-                      <i class="fa fa-briefcase" aria-hidden="true"></i> {{ $blogger->designation }}
+                      <i class="fa fa-briefcase" aria-hidden="true"></i> {{ $blogger->type }}
                     </span>
                     <!-- end title tagline -->
                     <div class="separator-line margin-three bg-black no-margin-lr sm-margin-top-three sm-margin-bottom-three no-margin-bottom "></div>
