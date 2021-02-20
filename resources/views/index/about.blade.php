@@ -32,7 +32,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 center-col">
             <center>
-              <a href="#!" class="{{ Request::is('about') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Board of Directors</a>
+              <a href="{{ route('index.about') }}" class="{{ Request::is('about') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Board of Directors</a>
               <a href="{{ route('index.about.type', 'member') }}" class="{{ Request::is('about/member') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Members</a>
               {{-- <a href="{{ route('index.employees') }}" class="{{ Request::is('people/employees') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Employees</a> --}}
               {{-- <a href="{{ route('index.members') }}" class="{{ Request::is('people/members') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Members</a> --}}
@@ -107,7 +107,7 @@
             </div>
         </div>
     </section>
-    <section class="cover-background" style="background-image:url('images/strategy.jpg');">
+    <section class="cover-background" style="background-image:url('/images/strategy.jpg');">
         <div class="opacity-full bg-dark-gray"></div>
         <div class="container position-relative">
             <div class="row">

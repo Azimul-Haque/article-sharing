@@ -34,7 +34,7 @@
         }
     </style>
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesheet.css') }}"> --}}
-    <meta property="og:image" content="{{ asset('images/banner.jpg') }}" />
+    <meta property="og:image" content="{{ asset('/images/banner.jpg') }}" />
     <meta property="og:title" content="Tenx | Tenx is a name of such Organization that runs or leads something 10x speed"/>
     <meta name="description" property="og:description" content="TenX Org is such an organization that runs or leads something on 10x speed. Developed by A. H. M. Azimul Haque" />
     <meta property="og:type" content="article"/>
@@ -229,7 +229,7 @@
         </div>
     </section>
     <!-- counter section -->
-    <section id="counter" class="fix-background" style="background-image:url('images/sliders/slider-img45.jpg');">
+    <section id="counter" class="fix-background" style="background-image:url('/images/sliders/slider-img45.jpg');">
         <div class="opacity-full bg-dark-gray"></div>
         <div class="container position-relative">
             <div class="row">
