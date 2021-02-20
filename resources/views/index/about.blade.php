@@ -49,7 +49,7 @@
                   <div class="model-details clearfix xs-no-margin box">
                       <div class="col-md-6 no-padding">
                         <center>
-                          <a href="{{ route('index.profile', $single->unique_key) }}">
+                          <a href="{{ route('blogger.profile', $single->unique_key) }}">
                             <img src="{{ asset('images/users/'. $single->image) }}" alt="{{ $single->name }}'s Photo" class="img-circle shadow xs-margin-bottom-ten" />
                           </a>
                         </center>
