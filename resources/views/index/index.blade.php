@@ -257,8 +257,8 @@
                 <!-- counter item -->
                 <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp" data-wow-duration="1200ms">
                     <i class="icon-chat medium-icon"></i>
-                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $publicationcount }}" data-speed="7000"></span>
-                    <span class="counter-title light-gray-text">Publications</span>
+                    <span class="timer counter-number white-text main-font font-weight-600" data-to="{{ $blogcount }}" data-speed="7000"></span>
+                    <span class="counter-title light-gray-text">Articles</span>
                 </div>
                 <!-- end counter item -->
             </div>

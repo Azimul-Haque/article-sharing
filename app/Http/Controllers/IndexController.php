@@ -46,6 +46,7 @@ class IndexController extends Controller
         $ongoingprojectcount = Project::where('status', 0)->count();
         $completeprojectcount = Project::where('status', 1)->count();
         $publicationcount = Publication::all()->count();
+        $blogcount = Blog::all()->count();
         
         return view('index.index')
                             ->withSliders($sliders)
@@ -55,7 +56,8 @@ class IndexController extends Controller
                             ->withEmployeecount($employeecount)
                             ->withOngoingprojectcount($ongoingprojectcount)
                             ->withCompleteprojectcount($completeprojectcount)
-                            ->withPublicationcount($publicationcount);
+                            ->withPublicationcount($publicationcount)
+                            ->withBlogcount($blogcount);
     }
 
     public function homeAdhoc()

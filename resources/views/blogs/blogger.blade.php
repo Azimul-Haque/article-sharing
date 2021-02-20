@@ -79,7 +79,7 @@
               @endif
               <div class="blog-details">
                   <div class="blog-date">{{ date('F d, Y', strtotime($blog->created_at)) }} | 
-                    <a href="{{ route('blog.categorywise', $blog->category->name) }}">{{ $blog->category->name }}</a>
+                    <a href="{{ route('blog.categorywise', strtolower(str_replace(" ", "-", $blog->category->name))) }}">{{ $blog->category->name }}</a>
                   </div>
                   <div class="blog-title"><a href="{{ route('blog.single', $blog->slug) }}">
                     {{ $blog->title }}
