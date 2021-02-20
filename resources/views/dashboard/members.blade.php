@@ -37,7 +37,7 @@
             @endif
           </td>
           <td>{{ $member->email }}<br/>{{ $member->phone }}</td>
-          <td>{{ $member->designation }}</td>
+          <td>{{ $member->type }}</td>
           <td>
             @if($member->image != null)
             <img src="{{ asset('images/users/'.$member->image)}}" style="height: 40px; width: auto;" />

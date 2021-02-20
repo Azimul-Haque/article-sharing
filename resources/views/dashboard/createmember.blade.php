@@ -92,14 +92,16 @@
                       <textarea type="text" name="bio" id="bio" class="summernote" required=""></textarea>
                   </div>
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                       <label for="bio" class="text-uppercase">Type</label><br/>
-                      <label class="radio-inline"><input type="radio" name="type" value="Member" checked>Member</label>
                       <label class="radio-inline"><input type="radio" name="type" value="CEO">CEO</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Director">Director</label>
                       <label class="radio-inline"><input type="radio" name="type" value="Advisor">Advisor</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Member" checked>Member</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Content Creator" checked>Content Creator</label>
+                      <label class="radio-inline"><input type="radio" name="type" value="Intern" checked>Intern</label>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <label for="bio" class="text-uppercase">Admin Role?</label><br/>
                       <label class="radio-inline"><input type="radio" name="adminornot" value="0" checked>NO</label>
                       <label class="radio-inline"><input type="radio" name="adminornot" value="1">YES</label>
