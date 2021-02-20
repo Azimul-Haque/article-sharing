@@ -95,6 +95,7 @@
                         @if(Auth::check())
                         <li class="dropdown panel simple-dropdown">
                             <a href="#nav_auth_user" class="dropdown-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-hover="dropdown">
+                                ACC
                                 @php
                                     $nav_user_name = explode(' ', Auth::user()->name);
                                     $last_name = array_pop($nav_user_name);
