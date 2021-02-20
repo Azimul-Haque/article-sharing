@@ -33,7 +33,10 @@
           <div class="col-md-12 col-sm-12 center-col">
             <center>
               <a href="{{ route('index.about') }}" class="{{ Request::is('about') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Board of Directors</a>
+              <a href="{{ route('index.about.type', 'advisor') }}" class="{{ Request::is('about/advisor') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Advisors</a>
               <a href="{{ route('index.about.type', 'member') }}" class="{{ Request::is('about/member') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Members</a>
+              <a href="{{ route('index.about.type', 'content-creator') }}" class="{{ Request::is('about/content-creator') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Content Creator</a>
+              <a href="{{ route('index.about.type', 'intern') }}" class="{{ Request::is('about/intern') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Intern</a>
               {{-- <a href="{{ route('index.employees') }}" class="{{ Request::is('people/employees') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Employees</a> --}}
               {{-- <a href="{{ route('index.members') }}" class="{{ Request::is('people/members') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Members</a> --}}
             </center>

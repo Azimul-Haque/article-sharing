@@ -80,17 +80,12 @@ class IndexController extends Controller
 
     public function getAboutType($type)
     {
-        // $strategies = Strategy::orderBy('id', 'desc')->get();
-        // $expertises = Expertise::orderBy('id', 'desc')->get();
-        $people = User::where('type', 'Director')
-                      ->orWhere('type', 'CEO')
+        $selecttype = ucwords(str_replace("-", " ", $type));
+        $people = User::where('type', $selecttype)
                       ->where('activation_status', 1)->get();
                       
         return view('index.about')
                         ->withPeople($people);
-
-                        // ->withStrategies($strategies)
-                        // ->withExpertises($expertises);
     }
 
     public function getPrivacy()
