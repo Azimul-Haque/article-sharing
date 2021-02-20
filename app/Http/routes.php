@@ -19,6 +19,7 @@ Route::get('/clear', ['as'=>'clear','uses'=>'IndexController@clear']);
 Route::get('/', ['as'=>'index.index','uses'=>'IndexController@index']);
 Route::get('/home', ['as'=>'index.homeadhoc','uses'=>'IndexController@homeAdhoc']); // reset password redirect adhoc solve
 Route::get('/about', ['as'=>'index.about','uses'=>'IndexController@getAbout']);
+Route::get('/about/{type}', ['as'=>'index.about.type','uses'=>'IndexController@getAboutType']);
 Route::get('/privacy', ['as'=>'index.privacy','uses'=>'IndexController@getPrivacy']);
 Route::get('/terms', ['as'=>'index.terms','uses'=>'IndexController@getTerms']);
 

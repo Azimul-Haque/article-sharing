@@ -78,6 +78,21 @@ class IndexController extends Controller
                         // ->withExpertises($expertises);
     }
 
+    public function getAboutType($type)
+    {
+        // $strategies = Strategy::orderBy('id', 'desc')->get();
+        // $expertises = Expertise::orderBy('id', 'desc')->get();
+        $people = User::where('type', 'Director')
+                      ->orWhere('type', 'CEO')
+                      ->where('activation_status', 1)->get();
+                      
+        return view('index.about')
+                        ->withPeople($people);
+
+                        // ->withStrategies($strategies)
+                        // ->withExpertises($expertises);
+    }
+
     public function getPrivacy()
     {                 
         return view('index.privacy');

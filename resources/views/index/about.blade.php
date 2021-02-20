@@ -32,8 +32,8 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 center-col">
             <center>
-              <a href="#!" class="highlight-button-dark btn btn-medium btn-round button xs-margin-bottom-five">Board of Directors</a>
-              {{-- <a href="{{ route('index.advisors') }}" class="{{ Request::is('people/advisors') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Advisors</a> --}}
+              <a href="#!" class="{{ Request::is('about') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Board of Directors</a>
+              <a href="{{ route('index.about.type', 'member') }}" class="{{ Request::is('about/member') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Members</a>
               {{-- <a href="{{ route('index.employees') }}" class="{{ Request::is('people/employees') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Employees</a> --}}
               {{-- <a href="{{ route('index.members') }}" class="{{ Request::is('people/members') ? 'highlight-button-dark' : 'highlight-button' }} btn btn-small btn-round button xs-margin-bottom-five">Members</a> --}}
             </center>
@@ -58,7 +58,7 @@
                               <a href="{{ route('blogger.profile', $single->unique_key) }}">
                                 <span class="team-name text-uppercase black-text display-block font-weight-600">{{ $single->name }}</span>
                               </a>
-                              <span class="team-post text-uppercase letter-spacing-2 display-block">{{ $single->designation }}</span>
+                              <span class="team-post text-uppercase letter-spacing-2 display-block">{{ $single->type }}</span>
                               <div class="separator-line bg-black no-margin-lr margin-ten"></div>
                               <span class="margin-ten display-block clearfix xs-no-margin"></span>
                               <div class="person-social margin-ten xs-no-margin">
