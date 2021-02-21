@@ -13,6 +13,7 @@ use App\Like;
 use Carbon\Carbon;
 use DB, Hash, Auth, Image, File, Session;
 use Purifier;
+use Cookie;
 
 class BlogController extends Controller {
     
@@ -112,15 +113,19 @@ class BlogController extends Controller {
                         ->orderBy('created_at', 'DESC')
                         ->get();
                         //dd($archives);
-                        
-        dd(Session::getId());
+
+        // dd(Session::getId());
+        if(Cookie::get('name')) {
+          dd(Cookie::get('name'));
+        } else {
+          
+        }
 
         return view('blogs.single')
                 ->withBlog($blog)
                 ->withCategories($categories)
                 ->withPopulars($populars)
-                ->withArchives($archives)
-                ->withMac($mac);
+                ->withArchives($archives);
     }
 
     /**
