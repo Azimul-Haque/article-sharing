@@ -113,9 +113,9 @@ class BlogController extends Controller {
                         ->get();
                         //dd($archives);
         $mac='UNKNOWN';
-        foreach(explode("\n",str_replace(' ','',trim(`getmac`,"\n"))) as $i)
-        if(strpos($i,'Tcpip')>-1){$mac=substr($i,0,17);break;}
-        $mac;
+        // foreach(explode("\n",str_replace(' ','',trim(`getmac`,"\n"))) as $i)
+        // if(strpos($i,'Tcpip')>-1){$mac=substr($i,0,17);break;}
+        // $mac;
         // $mac = substr(exec('getmac'), 0, 17);
         $mac = $request->ip();;
 
