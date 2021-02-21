@@ -31,7 +31,10 @@
       <tbody>
         @foreach($blogs as $blog)
         <tr>
-          <td><a href="{{ route('blog.single', $blog->slug) }}" title="View this Article" target="_blank">{{ $blog->title }}</a></td>
+          <td>
+            <a href="{{ route('blog.single', $blog->slug) }}" title="View this Article" target="_blank">{{ $blog->title }}</a><br/>
+            <i class="fa fa-eye"></i> {{ $blog->views }} View(s)
+          </td>
           <td>{{ $blog->category->name }}</td>
           <td>{{ $blog->user->name }}</td>
           <td><b>{{ date('F d, Y', strtotime($blog->created_at)) }}</b></td>
