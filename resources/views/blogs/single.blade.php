@@ -134,7 +134,7 @@
                             </a>
                             <a href="#" class="blog-share" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"></i>Share</a>
                             {{-- <a href="#" class="comment"><i class="fa fa-comment-o"></i><span class="fb-comments-count" data-href="{{ Request::url() }}"></span> comment(s)</a> --}}
-                            <a href="#" class="comment"><i class="fa fa-comment-o"></i>
+                            {{-- <a href="#" class="comment"><i class="fa fa-comment-o"></i>
                             <span id="comment_count"></span> comment(s)</a>
                             <script type="text/javascript" src="{{ asset('vendor/hcode/js/jquery.min.js') }}"></script>
                             <script type="text/javascript">
@@ -149,7 +149,7 @@
                                         }
                                     }
                                 });
-                            </script>
+                            </script> --}}
                         </div>
                         <!-- end post tags -->
                     </div>
