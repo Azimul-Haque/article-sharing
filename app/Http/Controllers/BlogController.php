@@ -112,12 +112,8 @@ class BlogController extends Controller {
                         ->orderBy('created_at', 'DESC')
                         ->get();
                         //dd($archives);
-        $mac='UNKNOWN';
-        // foreach(explode("\n",str_replace(' ','',trim(`getmac`,"\n"))) as $i)
-        // if(strpos($i,'Tcpip')>-1){$mac=substr($i,0,17);break;}
-        // $mac;
-        // $mac = substr(exec('getmac'), 0, 17);
-        $mac = $request->ip();;
+                        
+        dd(Session::getId());
 
         return view('blogs.single')
                 ->withBlog($blog)
