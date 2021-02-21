@@ -98,7 +98,7 @@ class BlogController extends Controller {
         //
     }
 
-    public function getBlogPost($slug)
+    public function getBlogPost($slug, Request $request)
     {
         $categories = Category::all();
         $blog = Blog::where('slug', $slug)->first();
@@ -117,6 +117,7 @@ class BlogController extends Controller {
         if(strpos($i,'Tcpip')>-1){$mac=substr($i,0,17);break;}
         $mac;
         $mac = substr(exec('getmac'), 0, 17);
+        $mac = $request->ip();;
 
         return view('blogs.single')
                 ->withBlog($blog)
