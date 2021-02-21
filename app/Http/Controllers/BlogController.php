@@ -102,6 +102,9 @@ class BlogController extends Controller {
     {
         $categories = Category::all();
         $blog = Blog::where('slug', $slug)->first();
+        $blog->views++;
+        $blog->save();
+
         $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
                         ->select("created_at", DB::raw('count(*) as total'))
