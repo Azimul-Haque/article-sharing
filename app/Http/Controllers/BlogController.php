@@ -24,7 +24,7 @@ class BlogController extends Controller {
     public function index()
     {
         $categories = Category::all();
-        $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
+        $populars = Blog::orderBy('views', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
                         ->select("created_at", DB::raw('count(*) as total'))
                         ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
@@ -105,7 +105,7 @@ class BlogController extends Controller {
         $blog->views++;
         $blog->save();
 
-        $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
+        $populars = Blog::orderBy('views', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
                         ->select("created_at", DB::raw('count(*) as total'))
                         ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
@@ -212,7 +212,7 @@ class BlogController extends Controller {
         $name = ucwords(str_replace("-", " ", $name));
         // SEO factor
         $categories = Category::all();
-        $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
+        $populars = Blog::orderBy('views', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
                         ->select("created_at", DB::raw('count(*) as total'))
                         ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
@@ -239,7 +239,7 @@ class BlogController extends Controller {
 
     public function getMonthWise($date) {
         $categories = Category::all();
-        $populars = Blog::orderBy('likes', 'desc')->get()->take(4);
+        $populars = Blog::orderBy('views', 'desc')->get()->take(4);
         $archives = DB::table('blogs')
                         ->select("created_at", DB::raw('count(*) as total'))
                         ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
