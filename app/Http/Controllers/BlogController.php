@@ -115,17 +115,20 @@ class BlogController extends Controller {
                         //dd($archives);
 
         // dd(Session::getId());
-        if(Cookie::get('name')) {
-          dd(Cookie::get('name'));
+
+        $visitorcookie = Cookie::get('visitorcookie');
+        if(!empty($visitorcookie) || $visitorcookie != '' || $visitorcookie != null) {
+          // dd($visitorcookie);
         } else {
-          
+          Cookie::queue('visitorcookie', random_string(10), 525600);
         }
 
         return view('blogs.single')
                 ->withBlog($blog)
                 ->withCategories($categories)
                 ->withPopulars($populars)
-                ->withArchives($archives);
+                ->withArchives($archives)
+                ->withVisitorcookie($visitorcookie);
     }
 
     /**
