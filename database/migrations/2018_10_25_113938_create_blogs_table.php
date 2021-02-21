@@ -20,6 +20,7 @@ class CreateBlogsTable extends Migration
             $table->text('body');
             $table->string('slug')->unique();
             $table->integer('likes')->unsigned();
+            $table->integer('views')->unsigned();
             $table->integer('blogcategory_id')->unsigned()->nullable();
             $table->timestamps();
         });

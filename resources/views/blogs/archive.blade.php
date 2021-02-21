@@ -62,14 +62,14 @@
                             <div class="separator-line bg-black no-margin-lr margin-four"></div>
                             <div>
                                 <a href="#!" class="blog-like"><i class="fa fa-heart-o"></i>{{ $blog->likes }} Like(s)</a>
-                                <a href="#!" class="comment"><i class="fa fa-comment-o"></i>
-                                <span id="comment_count{{ $blog->id }}"></span>
-                                 comment(s)</a>
+                                {{-- <a href="#!" class="comment"><i class="fa fa-comment-o"></i>
+                                    <span id="comment_count{{ $blog->id }}"></span> comment(s)
+                                </a> --}}
                             </div>
                             <a class="highlight-button btn btn-small xs-no-margin-bottom" href="{{ route('blog.single', $blog->slug) }}">Continue Reading</a>
                         </div>
                     </div>
-                    <script type="text/javascript" src="{{ asset('vendor/hcode/js/jquery.min.js') }}"></script>
+                    {{-- <script type="text/javascript" src="{{ asset('vendor/hcode/js/jquery.min.js') }}"></script>
                     <script type="text/javascript">
                         $.ajax({
                             url: "https://graph.facebook.com/v2.2/?fields=share{comment_count}&id={{ url('/blog/'.$blog->slug) }}",
@@ -78,7 +78,7 @@
                                 $('#comment_count{{ $blog->id }}').text(data.share.comment_count);
                             }
                         });
-                    </script>
+                    </script> --}}
                     @endforeach
                     <!-- end post item -->
                     {{-- paginating --}}
