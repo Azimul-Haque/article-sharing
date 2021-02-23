@@ -128,8 +128,8 @@
 
                         <div class="separator-line bg-black no-margin-lr margin-four"></div>
                         <div>
-                            <a href="#!" class="blog-like" @if(Auth::check()) onclick="likeBlog({{ Auth::user()->id }}, {{ $blog->id }})" @else title="Login to Like!" @endif>
-                                <i class="fa fa-heart-o" id="like_icon"></i>
+                            <a href="#!" class="blog-like" onclick="likeBlog(123, {{ $blog->id }})">
+                                <i class="fa fa-heart-o" id="like_icon"></i>{{ Cookie::get('visitorcookie') }}
                                 <span id="like_span">{{ $blog->likes }} Like(s)</span>
                             </a>
                             <a href="#" class="blog-like"><i class="fa fa-eye"></i> {{ $blog->views }} View(s)</a>
@@ -250,7 +250,6 @@
             $('.note-video-clip').removeAttr('height');
         });
     </script>
-    @if(Auth::check())
     <script type="text/javascript">
         $(document).ready(function(){
             checkLiked();
@@ -267,8 +266,8 @@
 
         // check liked or not, based on cookies
         function checkLiked() {
-          $.get(window.location.protocol + "//" + window.location.host + "/check/like/" + {{ Auth::user()->id }} + "/" + {{ $blog->id }}, function(data, status){
-              //console.log(data);
+          $.get(window.location.protocol + "//" + window.location.host + "/check/like/" + {{ $blog->id }}, function(data, status){
+              console.log(data.cookie);
               if(data.status == 'liked') {
                 $('#like_span').text(data.likes +' Liked');
                 $('#like_icon').css('color', 'red');
@@ -281,5 +280,4 @@
           });
         }
     </script>
-    @endif
 @endsection

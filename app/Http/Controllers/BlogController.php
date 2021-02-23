@@ -118,17 +118,18 @@ class BlogController extends Controller {
 
         $visitorcookie = Cookie::get('visitorcookie');
         if(!empty($visitorcookie) || $visitorcookie != '' || $visitorcookie != null) {
-          dd($visitorcookie);
+          // $visitorcookie = Cookie::get('visitorcookie');
         } else {
           Cookie::queue('visitorcookie', random_string(10), 525600);
         }
+        
+        // dd($visitorcookie);
 
         return view('blogs.single')
                 ->withBlog($blog)
                 ->withCategories($categories)
                 ->withPopulars($populars)
-                ->withArchives($archives)
-                ->withVisitorcookie($visitorcookie);
+                ->withArchives($archives);
     }
 
     /**
@@ -199,20 +200,22 @@ class BlogController extends Controller {
         }
     }
 
-    public function checkLikeAPI($user_id, $blog_id) {
-        $isliked = Like::where('user_id', $user_id)
-                    ->where('blog_id', $blog_id)->first();
+    public function checkLikeAPI($blog_id) {
+        $isliked = Like::where('visitorcookie', Cookie::get('visitorcookie'))
+                       ->where('blog_id', $blog_id)->first();
         $blog = Blog::find($blog_id);
         if($isliked != null) {
             $data = [
                 "status" => "liked",
-                "likes" => $blog->likes
+                "likes" => $blog->likes,
+                "cookie" => Cookie::get('visitorcookie')
             ];
             return response()->json($data);
         } else {
             $data = [
                 "status" => "notliked",
-                "likes" => $blog->likes
+                "likes" => $blog->likes,
+                "cookie" => Cookie::get('visitorcookie')
             ];
             return response()->json($data);
         }
