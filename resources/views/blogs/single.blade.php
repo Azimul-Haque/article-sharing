@@ -267,7 +267,7 @@
         // check liked or not, based on cookies
         function checkLiked() {
           $.get(window.location.protocol + "//" + window.location.host + "/check/like/" + {{ $blog->id }}, function(data, status){
-              console.log(data.cookie);
+              // console.log(data.cookie);
               if(data.status == 'liked') {
                 $('#like_span').text(data.likes +' Liked');
                 $('#like_icon').css('color', 'red');
