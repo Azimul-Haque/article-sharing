@@ -34,6 +34,7 @@
           <td>
             <a href="{{ route('blog.single', $blog->slug) }}" title="View this Article" target="_blank">{{ $blog->title }}</a><br/>
             <span class="label label-success"><i class="fa fa-eye"></i> {{ $blog->views }} View(s)</span>
+            <span class="label label-primary"><i class="fa fa-heart"></i> {{ $blog->likes }} Like(s)</span>
           </td>
           <td>{{ $blog->category->name }}</td>
           <td>{{ $blog->user->name }}</td>
