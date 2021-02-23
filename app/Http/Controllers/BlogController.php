@@ -200,10 +200,12 @@ class BlogController extends Controller {
         }
     }
 
-    public function checkLikeAPI($blog_id) {
+    public function checkLikeAPI($blog_id)
+    {
         $isliked = Like::where('visitorcookie', Cookie::get('visitorcookie'))
                        ->where('blog_id', $blog_id)->first();
         $blog = Blog::find($blog_id);
+        
         if($isliked != null) {
             $data = [
                 "status" => "liked",
