@@ -66,13 +66,13 @@
     @yield('css')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB0F06WF5Z"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRVP83V2QG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-BB0F06WF5Z');
+      gtag('config', 'G-FRVP83V2QG');
     </script>
 </head>
 
