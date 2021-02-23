@@ -46,7 +46,9 @@
             @endif
           </td>
           <td>
-            <a class="btn btn-sm btn-primary" href="{{ route('dashboard.member.edit', $member->id) }}" title="Edit this Profile"><i class="fa fa-pencil"></i></a>
+            @if($member->email != 'orbachinujbuk@gmail.com')
+              <a class="btn btn-sm btn-primary" href="{{ route('dashboard.member.edit', $member->id) }}" title="Edit this Profile"><i class="fa fa-pencil"></i></a>
+            @endif
             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteMemberModal{{ $member->id }}" data-backdrop="static" title="Delete this Profile" disabled=""><i class="fa fa-trash-o"></i></button>
             <!-- Delete Member Modal -->
             <!-- Delete Member Modal -->
