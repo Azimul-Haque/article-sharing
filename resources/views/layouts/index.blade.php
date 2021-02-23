@@ -64,6 +64,16 @@
             <script src="{{ asset('vendor/hcode/js/html5shiv.js') }}"></script>
         <![endif]-->
     @yield('css')
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB0F06WF5Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BB0F06WF5Z');
+    </script>
 </head>
 
 <body>
