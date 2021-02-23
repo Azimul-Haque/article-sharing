@@ -128,8 +128,8 @@
 
                         <div class="separator-line bg-black no-margin-lr margin-four"></div>
                         <div>
-                            <a href="#!" class="blog-like" onclick="likeBlog(123, {{ $blog->id }})">
-                                <i class="fa fa-heart-o" id="like_icon"></i>{{ Cookie::get('visitorcookie') }}
+                            <a href="#!" class="blog-like" onclick="likeBlog({{ $blog->id }})">
+                                <i class="fa fa-heart-o" id="like_icon"></i>
                                 <span id="like_span">{{ $blog->likes }} Like(s)</span>
                             </a>
                             <a href="#" class="blog-like"><i class="fa fa-eye"></i> {{ $blog->views }} View(s)</a>
@@ -256,9 +256,9 @@
         });
 
         // like or dislike
-        function likeBlog(user_id, blog_id) {
+        function likeBlog(blog_id) {
           //console.log(user_id +','+ blog_id);
-          $.get(window.location.protocol + "//" + window.location.host + "/like/" + user_id + "/" + blog_id, function(data, status){
+          $.get(window.location.protocol + "//" + window.location.host + "/like/" + blog_id, function(data, status){
               //console.log("Data: " + data + "\nStatus: " + status);
               checkLiked();
           });

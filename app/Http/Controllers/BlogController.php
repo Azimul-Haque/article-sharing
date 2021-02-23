@@ -19,7 +19,7 @@ class BlogController extends Controller {
     
     public function __construct()
     {
-        $this->middleware('auth')->except('index', 'getBloggerProfile', 'getBlogPost', 'checkLikeAPI', 'getCategoryWise', 'getMonthWise');
+        $this->middleware('auth')->except('index', 'getBloggerProfile', 'getBlogPost', 'likeBlogAPI', 'checkLikeAPI', 'getCategoryWise', 'getMonthWise');
     }
 
     public function index()
@@ -173,16 +173,16 @@ class BlogController extends Controller {
         return view('blogs.blogger')->withBlogger($blogger);
     }
 
-    public function likeBlogAPI($user_id, $blog_id)
+    public function likeBlogAPI($blog_id)
     {
-        $like = Like::where('user_id', $user_id)
+        $like = Like::where('visitorcookie', Cookie::get('visitorcookie'))
                     ->where('blog_id', $blog_id)->first();
 
         $blog = Blog::find($blog_id);
 
         if($like == null) {
             $newlike = new Like;
-            $newlike->user_id = $user_id;
+            $newlike->visitorcookie = Cookie::get('visitorcookie');
             $newlike->blog_id = $blog_id;
             $newlike->save();
             if($blog != null) {
@@ -205,7 +205,7 @@ class BlogController extends Controller {
         $isliked = Like::where('visitorcookie', Cookie::get('visitorcookie'))
                        ->where('blog_id', $blog_id)->first();
         $blog = Blog::find($blog_id);
-        
+
         if($isliked != null) {
             $data = [
                 "status" => "liked",
