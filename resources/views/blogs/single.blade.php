@@ -264,6 +264,8 @@
               checkLiked();
           });
         }
+
+        // check liked or not, based on cookies
         function checkLiked() {
           $.get(window.location.protocol + "//" + window.location.host + "/check/like/" + {{ Auth::user()->id }} + "/" + {{ $blog->id }}, function(data, status){
               //console.log(data);

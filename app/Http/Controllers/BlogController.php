@@ -114,11 +114,11 @@ class BlogController extends Controller {
                         ->get();
                         //dd($archives);
 
-        dd(Session::getId());
+        // dd(Session::getId());
 
         $visitorcookie = Cookie::get('visitorcookie');
         if(!empty($visitorcookie) || $visitorcookie != '' || $visitorcookie != null) {
-          // dd($visitorcookie);
+          dd($visitorcookie);
         } else {
           Cookie::queue('visitorcookie', random_string(10), 525600);
         }
