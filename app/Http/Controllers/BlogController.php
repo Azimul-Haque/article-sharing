@@ -114,7 +114,7 @@ class BlogController extends Controller {
                         ->get();
                         //dd($archives);
 
-        // dd(Session::getId());
+        dd(Session::getId());
 
         $visitorcookie = Cookie::get('visitorcookie');
         if(!empty($visitorcookie) || $visitorcookie != '' || $visitorcookie != null) {
