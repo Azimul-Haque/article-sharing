@@ -322,7 +322,7 @@ class IndexController extends Controller
             Session::flash('success', 'Thank you for your message! We will get back to you.');
             return redirect()->route('index.contact');
         } else {
-            return redirect()->route('index.contact')->with('warning', 'The SUM is not correct. Please try again.')->withInput();
+            return redirect()->route('index.contact')->with('warning', 'The CAPTHCA is incorrect. Please try again.')->withInput();
         }
     }
 
